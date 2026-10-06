@@ -1,0 +1,1398 @@
+<title>Happy Move 2026 Vietnam Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Noto+Sans+KR:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: 월드비전 결과보고 문법(영문 아이브로 + 국문 제목, 숫자 카드, 각주 출처) 위에 해피무브 현장 사진을 배치. 모든 수치 옆에 출처 칩 */
+:root{
+  --accent-ink:#c43d0c;
+  --accent:#ff5515; --accent-strong:#e32c13; --accent-soft:#ffebe1; --accent-line:#ffd5bf;
+  --ink:#111222; --muted:#565461; --subtle:#3f3d4c;
+  --bg:#ffffff; --bg-alt:#f3f2f0; --line:#dedbd7; --line-strong:#c9c4bc;
+  --night:#112233; --night-ink:#ffffff; --night-muted:#b9c2cc;
+  --ph-bg:#fff4c2; --ph-ink:#6b4e00; --ph-line:#e8c64a;
+  --f-display:"Archivo","Noto Sans KR",system-ui,sans-serif;
+  --f-body:"Archivo","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#ff7a38; --accent-strong:#ff6929; --accent-soft:#3a2016; --accent-line:#5c3020;
+  --ink:#eeedf2; --muted:#a9a7b3; --subtle:#c9c7d1;
+  --bg:#14151c; --bg-alt:#1c1d26; --line:#2d2e39; --line-strong:#6a6878;
+  --night:#22324a; --night-ink:#ffffff; --night-muted:#b3bfcc; --accent-ink:#ff7a38;
+  --ph-bg:#3a3110; --ph-ink:#f3d66b; --ph-line:#6b5a1c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --accent:#ff7a38; --accent-strong:#ff6929; --accent-soft:#3a2016; --accent-line:#5c3020;
+  --ink:#eeedf2; --muted:#a9a7b3; --subtle:#c9c7d1;
+  --bg:#14151c; --bg-alt:#1c1d26; --line:#2d2e39; --line-strong:#6a6878;
+  --night:#22324a; --night-ink:#ffffff; --night-muted:#b3bfcc; --accent-ink:#ff7a38;
+  --ph-bg:#3a3110; --ph-ink:#f3d66b; --ph-line:#6b5a1c; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.7;margin:0;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:20px}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.h2{font-size:clamp(26px,3.4vw,36px);font-weight:900;line-height:1.3;margin-top:8px}
+.lead{color:var(--muted);max-width:65ch;margin-top:14px}
+section{padding-block:88px}
+section.alt{background:var(--bg-alt)}
+.num{font-variant-numeric:tabular-nums}
+
+/* source chips + placeholders */
+.src{display:inline-block;font-family:var(--f-mono);font-size:11px;line-height:1;padding:4px 6px;border-radius:4px;background:var(--bg-alt);color:var(--muted);border:1px solid var(--line);vertical-align:2px;white-space:nowrap;cursor:help}
+section.alt .src{background:var(--bg)}
+.src.p{border-style:dashed}
+.ph{display:inline;background:var(--ph-bg);color:var(--ph-ink);border:1px dashed var(--ph-line);border-radius:4px;padding:1px 6px;font-size:.9em;font-weight:500}
+.plan{display:inline-block;font-size:11px;font-weight:700;padding:3px 7px;border-radius:99px;border:1px dashed var(--line-strong);color:var(--muted);letter-spacing:.04em}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:60px}
+.brand{font-family:var(--f-display);font-weight:800;font-size:15px;white-space:nowrap;display:flex;gap:8px;align-items:center}
+.brand i{font-style:normal;color:var(--accent)}
+.nav ul{display:flex;gap:18px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none;font-size:14px;color:var(--muted)}
+.nav ul a{text-decoration:none;white-space:nowrap}
+.nav ul a:hover{color:var(--accent)}
+@media (max-width:760px){.nav ul{display:none}}
+
+/* hero */
+.hero{background:var(--night);color:var(--night-ink);padding-block:72px 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:end}
+.hero .eyebrow{color:#ff7a38}
+.hero h1{font-family:var(--f-display);font-weight:900;font-stretch:112%;font-size:clamp(44px,6.6vw,92px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;margin-top:18px}
+.hero h1 span{color:#ff7a38;display:block}
+.hero .kr{font-size:clamp(22px,2.6vw,30px);font-weight:900;margin-top:26px;line-height:1.4;color:#fff}
+.hero .tag-sub{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.4em;color:var(--night-muted);margin-top:14px}
+.hero .kr small{display:block;font-size:13px;font-weight:500;color:var(--night-muted);margin-top:6px}
+.hero .sub{color:var(--night-muted);margin-top:16px;max-width:52ch;line-height:1.85}
+@media (max-width:560px){.hero .sub br{display:none}}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;padding-block:18px 56px;border-top:1px solid #ffffff22;font-size:14px;color:var(--night-muted)}
+.hero .meta b{color:#fff;font-weight:700;margin-right:6px}
+.hero figure{margin:0;position:relative;align-self:end}
+.hero figure img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px 6px 0 0}
+.hero figcaption{position:absolute;left:12px;bottom:12px;font-size:12px;background:#112233cc;color:#fff;padding:4px 8px;border-radius:4px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero .meta{padding-bottom:8px}}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:40px}
+.kpi{background:var(--bg);padding:26px 22px 22px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.kpi .v{font-family:var(--f-display);font-weight:800;font-size:clamp(34px,4vw,46px);line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.kpi .v small{font-family:var(--f-body);font-size:18px;font-weight:700;margin-left:2px}
+.kpi .k{font-weight:700;margin-top:6px}
+.kpi .d{font-size:13px;color:var(--muted);line-height:1.5}
+.kpi .src{align-self:flex-start;margin-top:auto}
+.kpi.wide{grid-column:span 2;background:var(--accent-soft)}
+.kpi.wide blockquote{margin:0;font-size:17px;font-weight:700;line-height:1.55}
+.kpi.wide cite{font-style:normal;font-size:13px;color:var(--muted)}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.kpis{grid-template-columns:1fr}.kpi.wide{grid-column:auto}}
+
+/* overview */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.facts{width:100%;border-collapse:collapse;font-size:15px}
+.facts th,.facts td{text-align:left;padding:13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.facts th{width:88px;color:var(--muted);font-weight:500}
+.goals{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:g}
+.goals li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 16px;background:var(--bg);border:1px solid var(--line);border-radius:6px;align-items:start}
+.goals li::before{counter-increment:g;content:counter(g);font-family:var(--f-display);font-weight:800;font-size:22px;color:var(--accent);line-height:1.2}
+.goals b{display:block}
+.goals span{font-size:14px;color:var(--muted)}
+
+/* timeline */
+.tl-scroll{overflow-x:auto;margin-top:36px;padding-bottom:6px}
+.tl{display:grid;grid-template-columns:repeat(9,minmax(118px,1fr));gap:0;min-width:1060px;border-top:2px solid var(--ink)}
+.day{padding:14px 12px 16px;border-right:1px solid var(--line);font-size:13px;line-height:1.5;display:flex;flex-direction:column;gap:8px}
+.day:last-child{border-right:0}
+.day .dn{font-family:var(--f-display);font-weight:800;font-size:12px;letter-spacing:.1em;color:var(--muted)}
+.day .dd{font-family:var(--f-display);font-weight:800;font-size:22px;line-height:1}
+.day .dd small{font-family:var(--f-body);font-size:12px;font-weight:500;color:var(--muted);margin-left:4px}
+.slot{padding:7px 8px;border-radius:4px;background:var(--bg-alt)}
+.slot.w{background:var(--accent-soft);color:var(--ink)}
+.slot.e{background:var(--night);color:var(--night-ink)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);margin-top:14px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+/* activities */
+.act{display:grid;grid-template-columns:280px 1fr;gap:48px;padding-block:56px;border-top:1px solid var(--line)}
+.act:first-of-type{border-top:0;padding-top:24px}
+@media (max-width:900px){.act{grid-template-columns:1fr;gap:24px}}
+.act-head{position:sticky;top:84px;align-self:start;display:flex;flex-direction:column;gap:10px}
+@media (max-width:900px){.act-head{position:static}}
+.act-no{font-family:var(--f-display);font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--accent)}
+.act-head h3{font-size:24px;font-weight:900;line-height:1.35}
+.act-head .where{font-size:14px;color:var(--muted)}
+.big{margin-top:10px;display:flex;flex-direction:column;gap:14px}
+.big div{border-top:2px solid var(--ink);padding-top:10px}
+.big b{display:block;font-family:var(--f-display);font-weight:800;font-size:40px;line-height:1;font-variant-numeric:tabular-nums}
+.big b small{font-family:var(--f-body);font-size:16px;margin-left:3px}
+.big span{font-size:13px;color:var(--muted)}
+.act-body{min-width:0;display:flex;flex-direction:column;gap:28px}
+.act-body h4{font-size:15px;margin:0 0 10px;font-weight:700}
+.act-body p+p{margin-top:10px}
+.bullets{margin:0;padding-left:1.1em;display:grid;gap:6px}
+.effects{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.effects div{padding:16px;border:1px solid var(--line);border-radius:6px;font-size:14px;line-height:1.6;min-width:0}
+.effects b{display:block;font-size:15px;margin-bottom:6px}
+@media (max-width:700px){.effects{grid-template-columns:1fr}}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+table.t{width:100%;border-collapse:collapse;font-size:14px;min-width:520px}
+table.t th,table.t td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.t thead th{background:var(--bg-alt);font-weight:700;font-size:13px;color:var(--subtle)}
+table.t tr:last-child td{border-bottom:0}
+table.t td.r,table.t th.r{text-align:right;font-variant-numeric:tabular-nums}
+
+/* before/after */
+.ba-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.ba-tabs button{font:inherit;font-size:13px;padding:6px 12px;border-radius:99px;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);cursor:pointer}
+.ba-tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ba{position:relative;aspect-ratio:3/2;max-width:100%;border-radius:6px;overflow:hidden;background:var(--bg-alt);user-select:none}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;box-shadow:0 0 0 1px #0003;pointer-events:none}
+.ba .bar::after{content:"◀ ▶";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:#112233;font-size:10px;padding:8px 9px;border-radius:99px;white-space:nowrap}
+.ba .tag{position:absolute;top:10px;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;background:#112233d9;color:#fff}
+.ba .tag.l{left:10px}.ba .tag.rr{right:10px;background:#ff5515}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-cap{font-size:13px;color:var(--muted);margin-top:8px}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.gal figure{margin:0;min-width:0}
+.gal img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;background:var(--bg-alt)}
+.gal figcaption{font-size:12px;color:var(--muted);line-height:1.45;margin-top:5px}
+.gal.lg{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+
+.quote{margin:0;padding:22px 24px;border-radius:6px;background:var(--accent-soft)}
+.quote p{font-size:17px;font-weight:700;line-height:1.65}
+.quote cite{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:10px}
+
+.chips{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.chips div{padding:10px 12px;border:1px solid var(--line);border-radius:6px;font-size:13px;line-height:1.5;min-width:0}
+.chips b{font-family:var(--f-mono);font-size:11px;color:var(--accent);display:block}
+@media (max-width:520px){.chips{grid-template-columns:1fr}}
+
+/* voices */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+@media (max-width:900px){.voices{grid-template-columns:1fr}}
+.voice{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:28px 24px;display:flex;flex-direction:column;gap:16px}
+.voice .who{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--accent)}
+.voice p{font-size:16px;line-height:1.75}
+.voice cite{font-style:normal;font-size:13px;color:var(--muted);margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.letter{display:grid;grid-template-columns:260px 1fr;gap:32px;margin-top:40px;align-items:start}
+.letter img{width:100%;border:1px solid var(--line);border-radius:4px;background:#fff}
+@media (max-width:700px){.letter{grid-template-columns:1fr}}
+
+/* bars */
+.bars{display:grid;gap:14px;margin-top:8px}
+.bar-row{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;font-size:14px}
+.bar-row .lbl{font-weight:700}
+.bar-pair{display:grid;gap:4px}
+.bar-line{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar-line i{display:block;height:12px;border-radius:2px;background:var(--line-strong);min-width:2px}
+.bar-line.b i{background:var(--accent)}
+@media (max-width:520px){.bar-row{grid-template-columns:1fr;gap:4px}}
+
+.budget-top{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.budget-top div{border-top:2px solid var(--ink);padding-top:12px}
+.budget-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:clamp(26px,3.2vw,36px);line-height:1.1;font-variant-numeric:tabular-nums}
+.budget-top span{font-size:13px;color:var(--muted)}
+@media (max-width:640px){.budget-top{grid-template-columns:1fr}}
+.meter{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:22px}
+.meter i{display:block;height:100%;background:var(--accent)}
+.bud{margin-top:32px}
+.bud td .mini{display:block;height:6px;border-radius:2px;background:var(--line-strong);margin-top:6px}
+.bud td .mini.a{background:var(--accent)}
+.over{color:var(--accent-strong);font-weight:700}
+
+/* media */
+.media{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
+@media (max-width:900px){.media{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.media{grid-template-columns:1fr}}
+.m{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--line);border-radius:6px;text-decoration:none;background:var(--bg);min-width:0}
+a.m:hover{border-color:var(--accent)}
+.m .ty{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--accent)}
+.m b{font-size:15px;line-height:1.4}
+.m span{font-size:13px;color:var(--muted)}
+
+
+.press{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.pc{display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;min-width:0;transition:border-color .2s,transform .2s}
+.pc:hover{border-color:var(--accent);transform:translateY(-3px)}
+.pc .th{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--bg-alt)}
+.pc .th img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.pc:hover .th img{transform:scale(1.05)}
+.pc .outlet{position:absolute;left:10px;top:10px;background:#112233e6;color:#fff;font-size:12px;font-weight:700;padding:4px 9px;border-radius:4px}
+.pc .tx{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px}
+.pc .ty{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.04em}
+.pc b{font-size:16px;line-height:1.45}
+.pc .orig{font-size:12px;color:var(--muted);line-height:1.5}
+.pc .go{font-size:13px;font-weight:700;color:var(--accent);margin-top:6px}
+.lead-card{grid-column:1 / -1;flex-direction:row}
+.lead-card .th{flex:1.4;aspect-ratio:auto;min-height:300px}
+.lead-card .tx{flex:1;justify-content:center;padding:28px 32px;gap:10px}
+.lead-card b{font-size:clamp(20px,2.2vw,26px);font-weight:900}
+@media (max-width:900px){.press{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.press{grid-template-columns:1fr}.lead-card{flex-direction:column}.lead-card .th{aspect-ratio:16/9;min-height:0}.lead-card .tx{padding:18px}}
+.onair-head{display:flex;align-items:center;gap:10px;margin-top:40px;font-size:14px;color:var(--muted)}
+.onair-head b{font-family:var(--f-display);letter-spacing:.14em;color:var(--ink)}
+.live-dot{width:10px;height:10px;border-radius:50%;background:#e32c13;box-shadow:0 0 0 0 #e32c1388}
+@media (prefers-reduced-motion:no-preference){.live-dot{animation:pulse 1.6s infinite}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #e32c1399}70%{box-shadow:0 0 0 10px #e32c1300}100%{box-shadow:0 0 0 0 #e32c1300}}
+.tv{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+@media (max-width:900px){.tv{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.tv{grid-template-columns:1fr}}
+.tvc{position:relative;display:flex;flex-direction:column;gap:2px;padding:18px;border-radius:8px;background:var(--night);color:var(--night-ink);text-decoration:none;min-height:150px;justify-content:flex-end;overflow:hidden;background-image:repeating-linear-gradient(0deg,#ffffff06 0 2px,transparent 2px 4px)}
+.tvc b{font-family:var(--f-display);font-size:22px;font-weight:800}
+.tvc span{font-size:13px;color:var(--night-muted)}
+.tvc .ts{font-family:var(--f-mono);font-size:12px;color:#ff7a38;margin-top:4px}
+.tvc .ch{position:absolute;top:14px;left:16px;font-family:var(--f-display);font-weight:800;font-size:12px;letter-spacing:.1em;color:#fff;background:#e32c13;padding:2px 7px;border-radius:3px}
+.tvc .play{position:absolute;top:12px;right:14px;width:38px;height:38px;border-radius:50%;background:#ffffff1f;color:#fff;display:grid;place-items:center;font-size:13px;transition:background .2s}
+a.tvc:hover .play{background:#ff5515}
+.tvc.sns .ch{background:#0a66c2}
+
+
+/* theme overview */
+.theme{padding-block:80px}
+.theme-banner{margin-top:28px;background:var(--night);color:var(--night-ink);border-radius:8px;padding:26px 28px;display:flex;flex-direction:column;gap:6px;text-align:center}
+.theme-banner b{font-size:clamp(19px,2.4vw,26px);font-weight:900;line-height:1.4;text-wrap:balance}
+.theme-banner span{font-size:14px;color:var(--night-muted)}
+.stages{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:none}
+.stage{position:relative;padding:4px 26px 8px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:14px;min-width:0}
+.stage:first-child{border-left:0;padding-left:0}
+.stage:not(:last-child)::after{content:"";position:absolute;top:22px;right:-9px;width:16px;height:16px;border-top:2px solid var(--accent);border-right:2px solid var(--accent);transform:rotate(45deg)}
+.st-top{display:flex;align-items:center;gap:12px}
+.st-no{font-family:var(--f-display);font-weight:800;font-size:44px;line-height:1;color:var(--accent)}
+.st-top b{display:block;font-size:20px;font-weight:900;line-height:1.2}
+.st-top i{font-style:normal;font-family:var(--f-display);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.stage h3{font-size:17px;font-weight:900;line-height:1.45;padding-top:14px;border-top:2px solid var(--ink)}
+.stage ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px}
+.stage ul li{padding-left:14px;position:relative;line-height:1.55}
+.stage ul li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.stage a{text-decoration:none;border-bottom:1px solid var(--line-strong)}
+.stage a:hover{color:var(--accent);border-color:var(--accent)}
+.stage em{font-style:normal;font-weight:700;color:var(--accent);white-space:nowrap}
+.st-fig{margin-top:auto;display:flex;align-items:baseline;gap:6px}
+.st-fig b{font-family:var(--f-display);font-weight:800;font-size:30px;color:var(--accent)}
+.st-fig span{font-size:13px;color:var(--muted)}
+@media (max-width:900px){.stages{grid-template-columns:1fr 1fr;row-gap:32px}.stage:nth-child(3){border-left:0;padding-left:0}.stage:nth-child(2)::after{display:none}}
+@media (max-width:560px){.stages{grid-template-columns:1fr}.stage{border-left:0;padding-left:0;padding-right:0}.stage::after{display:none}}
+.stage-tag{align-self:flex-start;font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;background:var(--night);color:var(--night-ink)}
+.theme-line{font-size:18px;font-weight:700;line-height:1.6;padding-left:14px;border-left:3px solid var(--accent)}
+
+
+.act-body h4{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--accent);margin:0 0 10px}
+.act-body p{font-size:16px;line-height:1.85}
+.effects b{font-size:16px;font-weight:900;color:var(--ink)}
+.learned{background:var(--night);color:var(--night-ink);border-radius:8px;padding:24px 26px}
+.learned h4{color:#ff7a38}
+.learned p{color:var(--night-ink)}
+.learned p+p{margin-top:12px}
+.act-body p.theme-line{font-size:19px;line-height:1.7}
+@media (max-width:560px){.act-body br{display:none}}
+
+
+/* day by day */
+.daynav{display:flex;gap:8px;overflow-x:auto;margin-top:28px;padding-bottom:6px;scrollbar-width:thin}
+.daynav a{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 14px;border-radius:8px;background:var(--bg);border:1px solid var(--line);text-decoration:none;min-width:78px}
+.daynav a:hover{border-color:var(--accent)}
+.daynav b{font-family:var(--f-display);font-size:12px;letter-spacing:.08em;color:var(--accent)}
+.daynav span{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums}
+.kinds{margin-top:14px}
+.kind{display:inline-block;flex:0 0 auto;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;line-height:1.4}
+.k-w{background:#ff5515;color:#fff}
+.k-e{background:#112233;color:#fff}
+.k-c{background:#e0a100;color:#111222}
+.k-o{background:#0f7b6c;color:#fff}
+.k-p{background:var(--bg);color:var(--subtle);border:1px solid var(--line-strong)}
+.k-t{background:var(--line);color:var(--subtle)}
+.days{margin-top:28px;display:grid;gap:14px;position:relative}
+.dcard{display:grid;grid-template-columns:120px 1fr 380px;gap:28px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:24px;scroll-margin-top:80px;align-items:start}
+.dmeta{display:flex;flex-direction:column;gap:4px}
+.dno{font-family:var(--f-display);font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--accent)}
+.ddate{font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.ddate small{font-family:var(--f-body);font-size:14px;font-weight:700;color:var(--muted);margin-left:6px}
+.dtext{min-width:0}
+.dtext h3{font-size:20px;font-weight:900;line-height:1.4;margin-bottom:12px}
+.dtext ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.dtext li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.65}
+.dtext li .kind{margin-top:2px;min-width:74px;text-align:center}
+.dph{display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:0}
+.dph figure{margin:0;min-width:0}
+.dph img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;background:var(--bg-alt)}
+.dph figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+.dph.one{grid-template-columns:1fr}
+.noimg{aspect-ratio:8/3;border:1px dashed var(--line-strong);border-radius:6px;display:grid;place-items:center;background:var(--bg-alt)}
+@media (max-width:1000px){.dcard{grid-template-columns:100px 1fr}.dph{grid-column:1 / -1}}
+@media (max-width:600px){.dcard{grid-template-columns:1fr;gap:14px;padding:18px}.dmeta{flex-direction:row;align-items:baseline;gap:12px}.dtext li{flex-direction:column;gap:4px}.dtext li .kind{min-width:0}}
+
+
+/* steam explainer */
+.steam{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
+.steam-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;padding:16px 18px}
+.steam-letters{list-style:none;margin:0;padding:0;display:flex;gap:6px}
+.steam-letters li{display:flex;flex-direction:column;align-items:center;width:52px}
+.steam-letters b{width:38px;height:38px;border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:16px}
+.steam-letters span{font-size:12px;font-weight:700;margin-top:5px}
+.steam-letters i{font-style:normal;font-size:10px;color:var(--muted)}
+.steam-def{flex:1;min-width:220px;font-size:14px !important;line-height:1.6 !important;color:var(--subtle)}
+.steam-more summary{cursor:pointer;list-style:none;padding:11px 18px;border-top:1px solid var(--line);font-size:13px;font-weight:700;color:var(--accent);display:flex;justify-content:space-between;align-items:center}
+.steam-more summary::-webkit-details-marker{display:none}
+.steam-more summary::after{content:"+";font-size:18px;line-height:1}
+.steam-more[open] summary::after{content:"−"}
+.steam-body{padding:0 18px 20px;display:grid;gap:16px}
+.steam-banner{background:var(--night);color:#fff;border-radius:8px;padding:16px 18px;text-align:center;display:flex;flex-direction:column;gap:4px}
+.steam-banner span{font-family:var(--f-display);font-size:14px;color:var(--night-muted)}
+.steam-banner b{font-size:17px;font-weight:900;line-height:1.45}
+.steam-body > p{font-size:14px !important;line-height:1.75 !important}
+.steam-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.sc{border-top:4px solid var(--night);background:var(--bg-alt);border-radius:0 0 6px 6px;padding:14px;min-width:0}
+.sc-no{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--accent)}
+.sc b{display:block;font-size:14px;font-weight:900;margin:4px 0 8px;line-height:1.4}
+.sc ul{margin:0;padding-left:1em;font-size:12.5px;line-height:1.6;color:var(--subtle);display:grid;gap:2px}
+@media (max-width:760px){.steam-cards{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.steam-cards{grid-template-columns:1fr}.steam-letters li{width:46px}}
+
+.hero h1 .rpt{display:block;width:max-content;font-family:var(--f-body);font-style:normal;font-weight:900;font-size:.3em;letter-spacing:0;color:#fff;border:2px solid #ffffff66;border-radius:6px;padding:.18em .5em;vertical-align:middle;display:inline-block;margin-top:.5em;line-height:1.2;white-space:nowrap}
+
+
+/* hero photo background */
+.hero{position:relative;isolation:isolate;padding-block:120px 0;min-height:640px;display:flex;align-items:flex-end}
+.hero-bg{position:absolute;inset:0;z-index:-1;background:url("img/hero.jpg") center 45%/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b1622f2 0%,#0b1622d9 45%,#0b162299 100%),linear-gradient(0deg,#0b1622 0%,#0b162200 45%)}
+.hero .wrap{grid-template-columns:1fr;width:100%}
+.hero .wrap>div{max-width:760px}
+.hero h1,.hero .kr{text-shadow:0 2px 24px #0008}
+.hero .meta{border-top-color:#ffffff33}
+@media (max-width:860px){.hero{min-height:0;padding-top:80px}}
+
+
+/* day slider */
+.dslider{position:relative;margin-top:24px}
+.dctrl{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-bottom:12px}
+.dcount{font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.dcount b{color:var(--accent)}
+.dbtn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.dbtn:hover{border-color:var(--accent);color:var(--accent)}
+.dbtn:disabled{opacity:.35;cursor:default}
+.days{display:flex !important;gap:16px !important;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;margin-top:0 !important;padding-bottom:10px;scrollbar-width:thin;overscroll-behavior-x:contain}
+.days .dcard{flex:0 0 min(920px,86%);scroll-snap-align:start;grid-template-columns:1fr 1.1fr !important;grid-template-rows:auto 1fr;column-gap:28px;row-gap:6px}
+.days .dmeta{grid-column:1;flex-direction:row;align-items:baseline;gap:12px}
+.days .dtext{grid-column:1;grid-row:2}
+.days .dph{grid-column:2;grid-row:1 / span 2}
+.days .dph img{aspect-ratio:4/3}
+.days .dph.one img{aspect-ratio:3/2}
+.daynav a.on{background:var(--night);border-color:var(--night)}
+.daynav a.on b,.daynav a.on span{color:#fff}
+@media (max-width:760px){.days .dcard{flex-basis:92%;grid-template-columns:1fr !important}.days .dph{grid-column:1;grid-row:auto}}
+
+
+/* toc */
+.toc{padding-block:40px}
+.toc-list{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px}
+.toc-list a{display:grid;grid-template-columns:34px 1fr;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.toc-list a:hover b{color:var(--accent)}
+.tn{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--accent);grid-row:span 2}
+.toc-list b{font-size:15px;font-weight:700}
+.toc-list i{font-style:normal;font-family:var(--f-display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:760px){.toc-list{grid-template-columns:1fr 1fr}}
+@media (max-width:440px){.toc-list{grid-template-columns:1fr}}
+
+.nav .nn{font-family:var(--f-display);font-weight:800;font-size:11px;color:var(--accent);margin-right:5px;font-variant-numeric:tabular-nums}
+
+section,article{scroll-margin-top:72px}
+
+
+/* before/after toggle */
+.ba .after{clip-path:none;opacity:0;transition:opacity .6s ease}
+.ba[data-state="after"] .after{opacity:1}
+.ba img{cursor:pointer}
+.ba-switch{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;background:#112233cc;border-radius:99px;padding:4px;gap:2px;backdrop-filter:blur(6px)}
+.ba-switch button{font:inherit;font-family:var(--f-display);font-weight:800;font-size:12px;letter-spacing:.1em;border:0;border-radius:99px;padding:7px 16px;background:transparent;color:#ffffffb3;cursor:pointer}
+.ba-switch button[aria-pressed="true"]{background:#ff5515;color:#fff}
+@media (prefers-reduced-motion:reduce){.ba .after{transition:none}}
+
+
+/* day arrows (one card at a time) */
+.days{overflow-x:hidden !important;scroll-snap-type:none !important;padding-bottom:0 !important}
+.days .dcard{flex:0 0 100% !important}
+.dside{position:absolute;top:calc(50% + 20px);transform:translateY(-50%);z-index:2;width:52px;height:52px;font-size:28px;box-shadow:0 6px 18px #11223326}
+.dside.prev{left:-26px}.dside.next{right:-26px}
+.dside:disabled{opacity:0;pointer-events:none}
+@media (max-width:1180px){.dside.prev{left:6px}.dside.next{right:6px}.days .dcard{padding-inline:64px}}
+@media (max-width:600px){.dside{top:auto;bottom:-8px;transform:none;width:44px;height:44px}.dside.prev{left:calc(50% - 56px)}.dside.next{right:calc(50% - 56px)}.days .dcard{padding-inline:18px}.dslider{padding-bottom:56px}}
+
+
+/* logos */
+.brand{gap:12px}
+.brand img{display:block;height:24px;width:auto}
+.brand .lg-hmg{height:28px}
+.brand i{font-style:normal;color:var(--muted);font-weight:500}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand{background:#fff;padding:6px 12px;border-radius:6px}}
+:root[data-theme="dark"] .brand{background:#fff;padding:6px 12px;border-radius:6px}
+@media (max-width:420px){.brand img{height:19px}.brand .lg-hmg{height:22px}}
+
+
+/* before/after: slide wipe + buttons */
+.ba .after{opacity:1 !important;clip-path:inset(0 0 0 var(--pos,100%)) !important;transition:none}
+.ba.anim .after{transition:clip-path .8s cubic-bezier(.65,0,.35,1)}
+.ba .bar{transition:none}
+.ba.anim .bar{transition:left .8s cubic-bezier(.65,0,.35,1)}
+.ba.edge .bar{opacity:0}
+.ba input[type=range]{z-index:1}
+.ba-switch{z-index:2}
+@media (prefers-reduced-motion:reduce){.ba.anim .after,.ba.anim .bar{transition:none}}
+
+
+/* team performances */
+.teams{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.tm{margin:0;min-width:0;display:flex;flex-direction:column;gap:8px}
+.tm-ph{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:3/4;background:var(--bg-alt)}
+.tm-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .4s}
+.tm-ph .tm-team{opacity:0}
+.tm:hover .tm-team,.tm:focus-within .tm-team{opacity:1}
+.tm figcaption{display:flex;flex-direction:column;gap:2px;font-size:12.5px;line-height:1.5;color:var(--muted)}
+.tm-no{font-family:var(--f-display);font-weight:800;font-size:12px;color:var(--accent);letter-spacing:.06em}
+.tm figcaption b{font-size:14px;color:var(--ink);font-weight:900}
+@media (max-width:900px){.teams{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.teams{grid-template-columns:1fr 1fr}}
+@media (hover:none){.tm-ph .tm-team{display:none}}
+
+
+/* letter */
+.letter-tx{min-width:0;display:flex;flex-direction:column;gap:10px}
+.letter-tx .lead{margin-top:0}
+.letter-q{margin:6px 0 0;padding:18px 20px;border-left:4px solid var(--accent);background:var(--bg);border-radius:0 8px 8px 0;font-size:17px;font-weight:700;line-height:1.7}
+.letter-sign{font-size:13px;color:var(--muted)}
+.letter-more summary{cursor:pointer;font-size:14px;font-weight:700;color:var(--accent);padding:6px 0}
+.letter-body{display:grid;gap:12px;padding:14px 18px;background:var(--bg);border:1px solid var(--line);border-radius:8px;font-size:15px;line-height:1.85}
+
+
+/* team slideshow */
+.tshow{border-radius:10px;overflow:hidden;background:var(--night)}
+.ts-stage{position:relative;aspect-ratio:16/7}
+.tslide{position:absolute;inset:0;display:grid;grid-template-columns:1.35fr 1fr;gap:4px;opacity:0;transition:opacity .7s ease;pointer-events:none}
+.tslide.on{opacity:1;pointer-events:auto}
+.ts img{width:100%;height:100%;object-fit:cover;display:block}
+.ts-cap{position:absolute;left:0;right:0;bottom:0;padding:40px 22px 16px;background:linear-gradient(0deg,#0b1622e6,#0b162200);color:#fff;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.ts-cap .tm-no{color:#ff7a38}
+.ts-cap b{font-size:18px;font-weight:900}
+.ts-cap span:last-child{font-size:14px;color:#dfe5ec;flex-basis:100%}
+.ts-tabs{position:relative;display:flex;gap:4px;padding:10px 12px 14px;flex-wrap:wrap}
+.ts-tabs button{font:inherit;font-size:13px;font-weight:700;border:0;border-radius:99px;padding:6px 14px;background:#ffffff14;color:#ffffffb3;cursor:pointer}
+.ts-tabs button[aria-pressed="true"]{background:#ff5515;color:#fff}
+.ts-bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:#ffffff1a}
+.ts-bar i{display:block;height:100%;width:0;background:#ff7a38}
+@media (max-width:640px){.ts-stage{aspect-ratio:4/5}.tslide{grid-template-columns:1fr;grid-template-rows:1.4fr 1fr}}
+
+.lessons .emo{font-size:20px;margin-right:4px;vertical-align:-2px}
+
+
+/* QA fixes */
+.eyebrow,.act-no,.dno,.daynav b,.chips b,.voice .who,.pc .ty,.pc .go,.steam-more summary,.letter-more summary,.tm-no,.sc-no,.tn,.nav .nn,.act-body h4,.st-no{color:var(--accent-ink)}
+.hero .eyebrow,.learned h4,.ts-cap .tm-no{color:#ff7a38}
+.k-w{background:var(--accent-ink)}
+.k-e{background:var(--night)}
+.ba-switch button[aria-pressed="true"],.ts-tabs button[aria-pressed="true"]{background:var(--accent-ink)}
+.daynav a.on{border-color:var(--accent)}
+.ba img{cursor:default}
+.ba input{touch-action:pan-y}
+.ba:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:3px}
+.tvc .ts{position:static;opacity:1;display:block;pointer-events:auto}
+.ts-pause{margin-left:auto;font:inherit;font-size:12px;font-weight:700;border:1px solid #ffffff40;border-radius:99px;padding:5px 12px;background:transparent;color:#fff;cursor:pointer}
+.ts-pause[aria-pressed="true"]{background:#ffffff26}
+.hero h1 .rpt{display:inline-block}
+section,article{scroll-margin-top:72px}
+
+.lang{flex:0 0 auto;font-size:13px;font-weight:700;text-decoration:none;border:1px solid var(--line-strong);border-radius:99px;padding:5px 12px;color:var(--ink)}
+.lang:hover{border-color:var(--accent);color:var(--accent)}
+
+
+/* map */
+.leaflet-image-layer,.leaflet-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane,.leaflet-pane>canvas,.leaflet-pane>svg,.leaflet-tile,.leaflet-tile-container,.leaflet-zoom-box{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-tile::selection{background:0 0}.leaflet-safari .leaflet-tile{image-rendering:-webkit-optimize-contrast}.leaflet-safari .leaflet-tile-container{width:1600px;height:1600px;-webkit-transform-origin:0 0}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg{max-width:none!important;max-height:none!important}.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer{max-width:none!important;max-height:none!important;width:auto;padding:0}.leaflet-container img.leaflet-tile{mix-blend-mode:plus-lighter}.leaflet-container.leaflet-touch-zoom{-ms-touch-action:pan-x pan-y;touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{-ms-touch-action:pinch-zoom;touch-action:none;touch-action:pinch-zoom}.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{-ms-touch-action:none;touch-action:none}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-container a{-webkit-tap-highlight-color:rgba(51,181,229,.4)}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;-moz-box-sizing:border-box;box-sizing:border-box;z-index:800}.leaflet-overlay-pane svg{-moz-user-select:none}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-vml-shape{width:1px;height:1px}.lvml{behavior:url(#default#VML);display:inline-block;position:absolute}.leaflet-control{position:relative;z-index:800;pointer-events:visiblePainted;pointer-events:auto}.leaflet-bottom,.leaflet-top{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-control{float:left;clear:both}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;-webkit-transition:opacity .2s linear;-moz-transition:opacity .2s linear;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0}svg.leaflet-zoom-animated{will-change:transform}.leaflet-zoom-anim .leaflet-zoom-animated{-webkit-transition:-webkit-transform .25s cubic-bezier(0,0,.25,1);-moz-transition:-moz-transform .25s cubic-bezier(0,0,.25,1);transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-pan-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-tile{-webkit-transition:none;-moz-transition:none;transition:none}.leaflet-zoom-anim .leaflet-zoom-hide{visibility:hidden}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.leaflet-crosshair,.leaflet-crosshair .leaflet-interactive{cursor:crosshair}.leaflet-control,.leaflet-popup-pane{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:move;cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.leaflet-image-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-image-layer.leaflet-interactive,.leaflet-marker-icon.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive,svg.leaflet-image-layer.leaflet-interactive path{pointer-events:visiblePainted;pointer-events:auto}.leaflet-container{background:#ddd;outline-offset:1px}.leaflet-container a{color:#0078a8}.leaflet-zoom-box{border:2px dotted #38f;background:rgba(255,255,255,.5)}.leaflet-container{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;font-size:12px;font-size:.75rem;line-height:1.5}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}.leaflet-bar a,.leaflet-control-layers-toggle{background-position:50% 50%;background-repeat:no-repeat;display:block}.leaflet-bar a:focus,.leaflet-bar a:hover{background-color:#f4f4f4}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-touch .leaflet-bar a:first-child{border-top-left-radius:2px;border-top-right-radius:2px}.leaflet-touch .leaflet-bar a:last-child{border-bottom-left-radius:2px;border-bottom-right-radius:2px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-touch .leaflet-control-zoom-in,.leaflet-touch .leaflet-control-zoom-out{font-size:22px}.leaflet-control-layers{box-shadow:0 1px 5px rgba(0,0,0,.4);background:#fff;border-radius:5px}.leaflet-control-layers-toggle{background-image:url(images/layers.png);width:36px;height:36px}.leaflet-retina .leaflet-control-layers-toggle{background-image:url(images/layers-2x.png);background-size:26px 26px}.leaflet-touch .leaflet-control-layers-toggle{width:44px;height:44px}.leaflet-control-layers .leaflet-control-layers-list,.leaflet-control-layers-expanded .leaflet-control-layers-toggle{display:none}.leaflet-control-layers-expanded .leaflet-control-layers-list{display:block;position:relative}.leaflet-control-layers-expanded{padding:6px 10px 6px 6px;color:#333;background:#fff}.leaflet-control-layers-scrollbar{overflow-y:scroll;overflow-x:hidden;padding-right:5px}.leaflet-control-layers-selector{margin-top:2px;position:relative;top:1px}.leaflet-control-layers label{display:block;font-size:13px;font-size:1.08333em}.leaflet-control-layers-separator{height:0;border-top:1px solid #ddd;margin:5px -10px 5px -6px}.leaflet-default-icon-path{background-image:url(images/marker-icon.png)}.leaflet-container .leaflet-control-attribution{background:#fff;background:rgba(255,255,255,.8);margin:0}.leaflet-control-attribution,.leaflet-control-scale-line{padding:0 5px;color:#333;line-height:1.4}.leaflet-control-attribution a{text-decoration:none}.leaflet-control-attribution a:focus,.leaflet-control-attribution a:hover{text-decoration:underline}.leaflet-attribution-flag{display:inline!important;vertical-align:baseline!important;width:1em;height:.6669em}.leaflet-left .leaflet-control-scale{margin-left:5px}.leaflet-bottom .leaflet-control-scale{margin-bottom:5px}.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;white-space:nowrap;-moz-box-sizing:border-box;box-sizing:border-box;background:rgba(255,255,255,.8);text-shadow:1px 1px #fff}.leaflet-control-scale-line:not(:first-child){border-top:2px solid #777;border-bottom:none;margin-top:-2px}.leaflet-control-scale-line:not(:first-child):not(:last-child){border-bottom:2px solid #777}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-attribution,.leaflet-touch .leaflet-control-layers{box-shadow:none}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-layers{border:2px solid rgba(0,0,0,.2);background-clip:padding-box}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-content{margin:13px 24px 13px 20px;line-height:1.3;font-size:13px;font-size:1.08333em;min-height:1px}.leaflet-popup-content p{margin:17px 0;margin:1.3em 0}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-top:-1px;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;pointer-events:auto;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;text-align:center;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;text-decoration:none;background:0 0}.leaflet-container a.leaflet-popup-close-button:focus,.leaflet-container a.leaflet-popup-close-button:hover{color:#585858}.leaflet-popup-scrolled{overflow:auto}.leaflet-oldie .leaflet-popup-content-wrapper{-ms-zoom:1}.leaflet-oldie .leaflet-popup-tip{width:24px;margin:0 auto}.leaflet-oldie .leaflet-control-layers,.leaflet-oldie .leaflet-control-zoom,.leaflet-oldie .leaflet-popup-content-wrapper,.leaflet-oldie .leaflet-popup-tip{border:1px solid #999}.leaflet-div-icon{background:#fff;border:1px solid #666}.leaflet-tooltip{position:absolute;padding:6px;background-color:#fff;border:1px solid #fff;border-radius:3px;color:#222;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,.4)}.leaflet-tooltip.leaflet-interactive{cursor:pointer;pointer-events:auto}.leaflet-tooltip-bottom:before,.leaflet-tooltip-left:before,.leaflet-tooltip-right:before,.leaflet-tooltip-top:before{position:absolute;pointer-events:none;border:6px solid transparent;background:0 0;content:""}.leaflet-tooltip-bottom{margin-top:6px}.leaflet-tooltip-top{margin-top:-6px}.leaflet-tooltip-bottom:before,.leaflet-tooltip-top:before{left:50%;margin-left:-6px}.leaflet-tooltip-top:before{bottom:0;margin-bottom:-12px;border-top-color:#fff}.leaflet-tooltip-bottom:before{top:0;margin-top:-12px;margin-left:-6px;border-bottom-color:#fff}.leaflet-tooltip-left{margin-left:-6px}.leaflet-tooltip-right{margin-left:6px}.leaflet-tooltip-left:before,.leaflet-tooltip-right:before{top:50%;margin-top:-6px}.leaflet-tooltip-left:before{right:0;margin-right:-12px;border-left-color:#fff}.leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff}@media print{.leaflet-control{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.mapbox{display:grid;grid-template-columns:260px 1fr;gap:16px;margin-top:28px;align-items:stretch}
+.levels{list-style:none;margin:0;padding:0;display:grid;gap:8px;align-content:start}
+.levels button{width:100%;display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:start;text-align:left;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px;cursor:pointer}
+.levels button:hover{border-color:var(--accent)}
+.levels button[aria-pressed="true"]{border-color:var(--night);background:var(--night);color:var(--night-ink)}
+.lv-no{font-family:var(--f-display);font-weight:800;font-size:18px;color:var(--accent-ink);line-height:1.3}
+.levels button[aria-pressed="true"] .lv-no{color:#ff7a38}
+.lv-t{display:flex;flex-direction:column;gap:2px;min-width:0}
+.lv-t i{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.06em;opacity:.75}
+.lv-t b{font-size:17px;font-weight:900}
+.lv-t small{font-size:12px;opacity:.75}
+.mapwrap{position:relative;min-width:0;border-radius:10px;overflow:hidden;background:#0b1622}
+#leafmap{height:clamp(360px,52vw,520px);width:100%;background:#0b1622}
+.map-legend{position:absolute;left:10px;bottom:10px;z-index:500;display:flex;flex-wrap:wrap;gap:6px 12px;background:#0b1622d9;color:#fff;font-size:12px;padding:7px 10px;border-radius:6px}
+.map-legend span{display:flex;align-items:center;gap:6px}
+.lg-line{display:inline-block;width:18px;height:0;border-top:2px solid #fff}
+.lg-line.p{border-top:2px dashed #ffb27a}
+.lg-line.m{border-top:3px solid #ff5515}
+.lg-dot{width:10px;height:10px;border-radius:50%;background:#ff5515;border:2px solid #fff}
+.leaflet-container{font-family:var(--f-body)}
+.lv-label{background:#0b1622e6;color:#fff;border:0;border-radius:4px;font-size:12px;font-weight:700;padding:3px 8px;box-shadow:none}
+.lv-label::before{display:none}
+.leaflet-popup-content{font-size:13px;line-height:1.5;margin:10px 12px}
+.leaflet-popup-content b{display:block;font-size:14px}
+@media (max-width:820px){.mapbox{grid-template-columns:1fr}.levels{grid-template-columns:repeat(3,1fr)}.levels button{grid-template-columns:1fr;gap:4px;padding:10px}.lv-t small{display:none}.lv-t b{font-size:14px}}
+
+
+/* video card */
+.vcard{display:grid;grid-template-columns:minmax(0,1.1fr) 1fr;margin-top:28px;border-radius:12px;overflow:hidden;background:var(--night);color:var(--night-ink);text-decoration:none}
+.vc-img{position:relative;aspect-ratio:16/9;overflow:hidden}
+.vc-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85;transition:transform .5s}
+.vcard:hover .vc-img img{transform:scale(1.04)}
+.vc-play{position:absolute;inset:0;margin:auto;width:68px;height:68px;border-radius:50%;background:#ff5515;color:#fff;display:grid;place-items:center;font-size:24px;box-shadow:0 8px 24px #0006}
+.vc-tx{display:flex;flex-direction:column;justify-content:center;gap:8px;padding:28px 32px}
+.vc-tx .eyebrow{color:#ff7a38}
+.vc-tx b{font-size:clamp(20px,2.2vw,26px);font-weight:900;line-height:1.4}
+.vc-tx span{color:var(--night-muted);font-size:15px}
+.vc-tx .vc-go{color:#ff7a38;font-weight:700;margin-top:6px}
+@media (max-width:700px){.vcard{grid-template-columns:1fr}.vc-tx{padding:20px}}
+
+.theme-banner .tb-kicker{font-size:12px;font-weight:700;letter-spacing:.08em;color:#ff7a38;margin-bottom:2px}
+
+
+/* media brief + tv thumbs */
+.tvc.has-th{padding:0;min-height:0;justify-content:flex-start;background:var(--night)}
+.tvc .tv-th{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}
+.tvc.has-th:hover .tv-th{transform:scale(1.04)}
+.tvc.has-th b,.tvc.has-th > span:not(.ch):not(.play){padding-inline:16px}
+.tvc.has-th b{padding-top:12px}
+.tvc.has-th .ts{padding-bottom:14px}
+.tvc.has-th .play{top:calc((100% - 92px)/2 - 19px);right:auto;left:50%;transform:translateX(-50%);width:46px;height:46px;background:#ff5515;font-size:16px;box-shadow:0 6px 18px #0006}
+.tvc.has-th .ch{top:10px;left:10px}
+.brief{border:0;padding:0;border-radius:14px;max-width:min(720px,calc(100vw - 32px));width:100%;background:var(--bg);color:var(--ink);box-shadow:0 30px 80px #0008;overflow:hidden}
+.brief::backdrop{background:#0b1622b3;backdrop-filter:blur(3px)}
+.br-img{position:relative;aspect-ratio:16/7;background:var(--bg-alt)}
+.br-img img{width:100%;height:100%;object-fit:cover;display:block}
+.br-outlet{position:absolute;left:14px;bottom:12px;background:#112233e6;color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:4px}
+.br-body{padding:22px 26px 24px;display:grid;gap:10px;max-height:60vh;overflow:auto}
+.br-kind{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--accent-ink)}
+.br-body h3{font-size:20px;font-weight:900;line-height:1.45}
+.br-orig{font-size:13px;color:var(--muted)}
+.br-body ul{margin:4px 0 0;padding-left:1.1em;display:grid;gap:8px;font-size:15px;line-height:1.7}
+.br-note{font-size:12px;color:var(--muted)}
+.br-act{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:6px}
+.br-act a{font-weight:700;text-decoration:none;background:var(--accent-ink);color:#fff;padding:9px 16px;border-radius:99px}
+.br-act button{font:inherit;font-weight:700;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);padding:9px 16px;border-radius:99px;cursor:pointer}
+.pc .go{color:var(--accent-ink)}
+
+/* lessons */
+.lessons{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-top:36px}
+@media (max-width:900px){.lessons{grid-template-columns:1fr}}
+.lessons>div{padding:24px;border-radius:8px;background:var(--bg);border:1px solid var(--line)}
+.lessons h3{font-size:16px;margin-bottom:12px}
+.lessons ul{margin:0;padding-left:1.1em;display:grid;gap:8px;font-size:15px}
+
+/* review memo */
+.memo{background:var(--ph-bg);border:1px dashed var(--ph-line);color:var(--ink);border-radius:8px;padding:24px;margin-top:36px}
+.memo h3{font-size:16px;color:var(--ph-ink);margin-bottom:10px}
+.memo ol{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:14px}
+
+footer{background:var(--night);color:var(--night-muted);padding-block:48px;font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer b{color:#fff}
+
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div lang="en"><nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <div class="brand"><img src="img/logo_wv.png" alt="World Vision" class="lg-wv"><i aria-hidden="true">×</i><img src="img/logo_hmg.png" alt="Hyundai Motor Group" class="lg-hmg"></div>
+    <ul>
+      <li><a href="#overview"><span class="nn">01</span>Overview</a></li>
+      <li><a href="#theme"><span class="nn">02</span>Key activities</a></li>
+      <li><a href="#summary"><span class="nn">03</span>Results</a></li>
+      <li><a href="#schedule"><span class="nn">04</span>Days</a></li>
+      <li><a href="#activities"><span class="nn">05</span>Activities</a></li>
+      <li><a href="#voices"><span class="nn">06</span>Voices</a></li>
+      <li><a href="#people"><span class="nn">07</span>Participants</a></li>
+      <li><a href="#media"><span class="nn">08</span>Media</a></li>
+      <li><a href="#next"><span class="nn">09</span>Lessons</a></li>
+    </ul>
+    <a class="lang" href="https://claude.ai/artifact/JYQ2ULdGFhZKpLGEjaawXo" target="_blank" rel="noopener">한국어</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <h1>HAPPYMOVE<span>2026 VIETNAM</span><em class="rpt">Final Report</em></h1>
+      <p class="kr">A time to learn, share, and grow together</p>
+      <p class="sub">The Hyundai Motor Group Happy Move Global Youth Volunteers<br>spent their days learning alongside the children of Quyet Thang, Hai Phong, Vietnam,<br>building a better school and healthier everyday lives.</p>
+      <p class="sub">From school renovation to STEAM education, hygiene education and cultural exchange.<br>Small moves by young people grew into children’s learning and dreams,<br>and together, people from two countries discovered new possibilities.</p>
+      <div class="meta">
+        <div><b>July 26 – August 3, 2026</b></div>
+        <div>Vietnam · Quyet Thang, Hai Phong</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="toc" class="toc alt" aria-label="Contents">
+  <div class="wrap">
+    <div class="eyebrow">Contents</div>
+    <ol class="toc-list"><li><a href="#overview"><span class="tn">01</span><b>Program Overview</b><i>Overview</i></a></li><li><a href="#theme"><span class="tn">02</span><b>Key Activities at a Glance</b><i>Key activities</i></a></li><li><a href="#summary"><span class="tn">03</span><b>Results at a Glance</b><i>At a glance</i></a></li><li><a href="#schedule"><span class="tn">04</span><b>Nine Days in Vietnam</b><i>Day by day</i></a></li><li><a href="#activities"><span class="tn">05</span><b>Results by Activity</b><i>Activity results</i></a></li><li><a href="#voices"><span class="tn">06</span><b>Voices from the Field</b><i>Voices</i></a></li><li><a href="#people"><span class="tn">07</span><b>Participants and Beneficiaries</b><i>Participants</i></a></li><li><a href="#media"><span class="tn">08</span><b>Media Coverage</b><i>Media</i></a></li><li><a href="#next"><span class="tn">09</span><b>Lessons and Next Steps</b><i>Next steps</i></a></li></ol>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="wrap">
+    <div class="eyebrow">About the program</div>
+    <h2 class="h2">Program Overview</h2>
+    <div class="two">
+      <table class="facts">
+        <tr><th>Program</th><td>Hyundai Motor Group Happy Move Volunteer Program 2026 · Vietnam</td></tr>
+        <tr><th>Location</th><td>Quyet Thang Commune, Hai Phong City, Vietnam</td></tr>
+        <tr><th>Sites</th><td>Tu Cuong Preschool · Primary School · Secondary School</td></tr>
+        <tr><th>Partners</th><td>Hyundai Motor Group · World Vision Korea (WVK) · World Vision International in Vietnam (WVIV) · Quyet Thang People’s Committee</td></tr>
+        <tr><th>Volunteers</th><td>58 Korean university students · 10 volunteers from Vietnam National University (VNU)</td></tr>
+        <tr><th>Period</th><td>July 26 – August 3, 2026</td></tr>
+      </table>
+      <div>
+        <h3 style="font-size:16px;margin-bottom:14px">Program objectives</h3>
+        <ol class="goals">
+          <li><div><b>Child-friendly learning environment</b><span>Green library, football playground and mural at Tu Cuong Primary School</span></div></li>
+          <li><div><b>STEAM experiential learning</b><span>For students of Tu Cuong Secondary School</span></div></li>
+          <li><div><b>Oral hygiene education and toy-making</b><span>For children of Tu Cuong Preschool</span></div></li>
+          <li><div><b>Cultural exchange</b><span>Korean volunteers · Vietnamese university volunteers · Quyet Thang community</span></div></li>
+          <li><div><b>Support for vulnerable children</b><span>Bicycle support</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Where we worked</div>
+    <h2 class="h2">Project Location</h2>
+    <p class="lead">Quyet Thang Commune, Hai Phong City, in northern Vietnam. Choose a level to zoom from the country down to the project site.</p>
+    <div class="mapbox">
+      <ol class="levels" role="group" aria-label="Map level">
+        <li><button type="button" data-lv="country" aria-pressed="false"><span class="lv-no">01</span><span class="lv-t"><i>Country</i><b>Vietnam</b><small>Việt Nam</small></span></button></li>
+        <li><button type="button" data-lv="city" aria-pressed="false"><span class="lv-no">02</span><span class="lv-t"><i>Province-level city</i><b>Hai Phong City</b><small>Thành phố Hải Phòng</small></span></button></li>
+        <li><button type="button" data-lv="commune" aria-pressed="true"><span class="lv-no">03</span><span class="lv-t"><i>Commune</i><b>Quyet Thang Commune</b><small>Xã Quyết Thắng · project site</small></span></button></li>
+      </ol>
+      <div class="mapwrap">
+        <div id="leafmap" role="region" aria-label="Satellite map of the project area"></div>
+        <div class="map-legend">
+          <span><i class="lg-line c"></i>Country</span><span><i class="lg-line p"></i>Province</span><span><i class="lg-line m"></i>Commune</span><span><i class="lg-dot"></i>Project schools</span>
+        </div>
+      </div>
+    </div>
+    <p class="note">※ Since the 2025 administrative reform, Vietnam has two levels of local government: provinces/centrally-run cities and communes/wards. Imagery © Esri, Maxar, Earthstar Geographics · Boundaries © OpenStreetMap contributors</p>
+  </div>
+</section>
+
+<section id="theme" class="theme">
+  <div class="wrap">
+    <div class="eyebrow">Key activities</div>
+    <h2 class="h2">Key Activities at a Glance</h2>
+    <div class="theme-banner">
+      <span class="tb-kicker">World Vision × Happy Move Vietnam · Theme</span>
+      <b>Better spaces and shared learning for children in an underserved area of Vietnam</b>
+      <span>An integrated volunteer program that builds child-friendly environments with schools and communities, and supports children’s learning and growth</span>
+    </div>
+    <ol class="stages">
+      <li class="stage">
+        <div class="st-top"><span class="st-no">01</span><div><b>Experience</b></div></div>
+        <h3>Experiencing the school,<br>understanding children’s daily lives</h3>
+        <ul>
+          <li>On-site orientation on Quyet Thang and its schools</li>
+          <li>How to communicate with children and child safeguarding guidelines</li>
+          <li>Safety training and lesson rehearsals</li>
+        </ul>
+      </li>
+      <li class="stage">
+        <div class="st-top"><span class="st-no">02</span><div><b>Action</b></div></div>
+        <h3>Creating spaces<br>for children</h3>
+        <ul>
+          <li><a href="#a1">Green library · reading hut</a></li>
+          <li><a href="#a1">Football playground · educational mural</a></li>
+        </ul>
+        <div class="st-fig"><b class="num">1,260</b><span>volunteer hours</span></div>
+      </li>
+      <li class="stage">
+        <div class="st-top"><span class="st-no">03</span><div><b>Share</b></div></div>
+        <h3>Sharing through<br>content and education</h3>
+        <ul>
+          <li><a href="#a2">STEAM learning for secondary students <em>178</em></a></li>
+          <li><a href="#a3">Oral hygiene education at preschool <em>275</em></a></li>
+          <li><a href="#a4">Learning kits made with teachers <em>300 sets</em></a></li>
+        </ul>
+      </li>
+      <li class="stage">
+        <div class="st-top"><span class="st-no">04</span><div><b>Connection</b></div></div>
+        <h3>Working with local youth<br>to make change together</h3>
+        <ul>
+          <li><a href="#a6">Korea–Vietnam cultural performances <em>8</em></a></li>
+          <li>Working side by side with <em>10</em> Vietnamese university volunteers</li>
+          <li><a href="#a5">Community giving · bicycles <em>20</em></a></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="summary" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">At a glance</div>
+    <h2 class="h2">Results at a Glance</h2>
+    <p class="lead">The change the 2026 Happy Move Vietnam team made together</p>
+    <div class="kpis">
+      <div class="kpi"><div class="v num">68</div><div class="k">Volunteers</div><div class="d">58 Korean university students · 10 VNU volunteers</div></div>
+      <div class="kpi"><div class="v num">100<small>%</small></div><div class="k">Planned activities completed</div><div class="d">All planned deliverables completed</div></div>
+      <div class="kpi"><div class="v num">1,672</div><div class="k">Direct beneficiaries</div><div class="d">947 direct participants</div></div>
+      <div class="kpi"><div class="v num">1,260<small>hrs</small></div><div class="k">Hours of direct labor</div><div class="d">School renovation at Tu Cuong Primary School</div></div>
+      <div class="kpi"><div class="v num">178</div><div class="k">STEAM students</div><div class="d">3 sessions for secondary students</div></div>
+      <div class="kpi"><div class="v num">275</div><div class="k">Hygiene kits</div><div class="d">Individual kits for preschool children</div></div>
+      <div class="kpi"><div class="v num">300<small>sets</small></div><div class="k">Educational sets</div><div class="d">Handmade soaps and handwashing guides, co-made with all preschool teachers</div></div>
+      <div class="kpi"><div class="v num">20<small>bikes</small></div><div class="k">Bicycle support</div><div class="d">For 20 students selected by the People’s Committee</div></div>
+      <div class="kpi"><div class="v num">8</div><div class="k">Media reports</div><div class="d">4 Vietnamese outlets · 3 Hai Phong TV · 1 LinkedIn</div></div>
+      <div class="kpi"><div class="v num">5<small>+</small>3</div><div class="k">Cultural performances</div><div class="d">5 by volunteers · 3 by local youth and children</div></div>
+      <div class="kpi wide">
+        <blockquote>“The Korean students have shown us their passion and youth energy, their desire to contribute, and their deep sense of responsibility to the community.”</blockquote>
+        <cite>Ms. Ha Dam Thanh Van, Vice Chairperson of Quyet Thang People’s Committee</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="wrap">
+    <div class="eyebrow">Day by day</div>
+    <h2 class="h2">Nine Days in Vietnam</h2>
+    <p class="lead">Follow the team day by day, from July 26 to August 3, 2026.</p>
+    <nav class="daynav" aria-label="Jump to day"><a href="#day01"><b>DAY 01</b><span>Jul 26</span></a><a href="#day02"><b>DAY 02</b><span>Jul 27</span></a><a href="#day03"><b>DAY 03</b><span>Jul 28</span></a><a href="#day04"><b>DAY 04</b><span>Jul 29</span></a><a href="#day05"><b>DAY 05</b><span>Jul 30</span></a><a href="#day06"><b>DAY 06</b><span>Jul 31</span></a><a href="#day07"><b>DAY 07</b><span>Aug 1</span></a><a href="#day08"><b>DAY 08</b><span>Aug 2</span></a><a href="#day09"><b>DAY 09</b><span>Aug 3</span></a></nav>
+    <div class="legend kinds"><span class="kind k-w">Renovation</span><span class="kind k-e">Education</span><span class="kind k-c">Cultural exchange</span><span class="kind k-o">Official</span><span class="kind k-p">Prep & team</span><span class="kind k-t">Travel</span></div>
+    <div class="dslider">
+      <div class="dctrl"><span class="dcount"><b id="dcur">01</b> / 09</span></div>
+      <button type="button" class="dbtn dside prev" id="dprev" aria-label="Previous day">‹</button>
+      <button type="button" class="dbtn dside next" id="dnext" aria-label="Next day">›</button>
+      <div class="days" id="dtrack" tabindex="0" aria-label="Daily schedule">
+      <article class="dcard" id="day01">
+        <div class="dmeta"><span class="dno">DAY 01</span><span class="ddate">Jul 26<small>Sun</small></span></div>
+        <div class="dtext"><h3>First steps toward Vietnam</h3><ul><li><span class="kind k-t">Travel</span><span>The team flew from Incheon and landed in Hanoi after about five hours.</span></li><li><span class="kind k-p">Prep & team</span><span>At orientation they learned how to communicate with children, child safeguarding guidelines and site safety rules.</span></li><li><span class="kind k-p">Prep & team</span><span>They heard about the culture and schools of Quyet Thang before starting work.</span></li></ul></div>
+        <div class="dph"><figure><img src="img/blog_d1_2.jpg" alt="At the airport before departure" loading="lazy"><figcaption>At the airport before departure</figcaption></figure><figure><img src="img/blog_d1_7.jpg" alt="On-site orientation" loading="lazy"><figcaption>On-site orientation</figcaption></figure></div>
+      </article>
+      <article class="dcard" id="day02">
+        <div class="dmeta"><span class="dno">DAY 02</span><span class="ddate">Jul 27<small>Mon</small></span></div>
+        <div class="dtext"><h3>Hyundai’s Ninh Binh plant and a first welcome</h3><ul><li><span class="kind k-o">Official</span><span>The team visited Hyundai’s Ninh Binh plant (HTMV), heard about its business in Vietnam and toured the production line.</span></li><li><span class="kind k-o">Official</span><span>At the welcome ceremony in Quyet Thang, local children and youth greeted them with performances.</span></li><li><span class="kind k-p">Prep & team</span><span>Back at the hotel, they checked materials and lesson flow for the first STEAM class.</span></li></ul></div>
+        <div class="dph"><figure><img src="img/blog_d2_4.jpg" alt="Children performing at the welcome ceremony" loading="lazy"><figcaption>Children performing at the welcome ceremony</figcaption></figure><figure><img src="img/blog_d2_6.jpg" alt="Group photo at the welcome ceremony" loading="lazy"><figcaption>Group photo at the welcome ceremony</figcaption></figure></div>
+      </article>
+      <article class="dcard" id="day03">
+        <div class="dmeta"><span class="dno">DAY 03</span><span class="ddate">Jul 28<small>Tue</small></span></div>
+        <div class="dtext"><h3>First shovel, first STEAM class</h3><ul><li><span class="kind k-w">Renovation</span><span>At Tu Cuong Primary School they worked on the playground drainage and covers and tidied the flower beds.</span></li><li><span class="kind k-e">Education</span><span>The first STEAM class: early shyness quickly turned into laughter and questions.</span></li><li><span class="kind k-p">Prep & team</span><span>In the evening, teams began rehearsing for the cultural performances.</span></li></ul></div>
+        <div class="dph"><figure><img src="img/fig11.jpg" alt="Renovation site" loading="lazy"><figcaption>Renovation site</figcaption></figure><figure><img src="img/fig21.jpg" alt="STEAM class" loading="lazy"><figcaption>STEAM class</figcaption></figure></div>
+      </article>
+      <article class="dcard" id="day04">
+        <div class="dmeta"><span class="dno">DAY 04</span><span class="ddate">Jul 29<small>Wed</small></span></div>
+        <div class="dtext"><h3>One shovelful at a time</h3><ul><li><span class="kind k-w">Renovation</span><span>Volunteers mixed and carried cement, repaired drainage frames and leveled the ground.</span></li><li><span class="kind k-e">Education</span><span>Each classroom ran a different STEAM session: balloon boats, pipe-cleaner dolls, cars, natural mosquito repellent and tangrams.</span></li><li><span class="kind k-p">Prep & team</span><span>Teams took turns rehearsing and fine-tuned their choreography.</span></li></ul></div>
+        <div class="dph"><figure><img src="img/fig17.jpg" alt="Carrying concrete" loading="lazy"><figcaption>Carrying concrete</figcaption></figure><figure><img src="img/fig25.jpg" alt="Testing a STEAM model" loading="lazy"><figcaption>Testing a STEAM model</figcaption></figure></div>
+      </article>
+      <article class="dcard" id="day05">
+        <div class="dmeta"><span class="dno">DAY 05</span><span class="ddate">Jul 30<small>Thu</small></span></div>
+        <div class="dtext"><h3>Color on the walls, a STEAM awards day</h3><ul><li><span class="kind k-w">Renovation</span><span>The mural took on color and tiles went down one by one, while drainage and cement work continued.</span></li><li><span class="kind k-e">Education</span><span>The last STEAM class ended with awards voted on by the students themselves.</span></li><li><span class="kind k-p">Prep & team</span><span>The oral-health crew prepared the next day’s hygiene lesson and toothbrushing dance.</span></li></ul></div>
+        <div class="dph"><figure><img src="img/fig12.jpg" alt="Painting the mural" loading="lazy"><figcaption>Painting the mural</figcaption></figure><figure><img src="img/fig23.jpg" alt="STEAM product exhibition" loading="lazy"><figcaption>STEAM product exhibition</figcaption></figure></div>
+      </article>
+      <article class="dcard" id="day06">
+        <div class="dmeta"><span class="dno">DAY 06</span><span class="ddate">Jul 31<small>Fri</small></span></div>
+        <div class="dtext"><h3>Rain or shine, at children’s eye level</h3><ul><li><span class="kind k-w">Renovation</span><span>When the rain came, volunteers put on raincoats and kept working on drainage and facilities.</span></li><li><span class="kind k-e">Education</span><span>At the preschool, the “Healthy Explorers” session taught handwashing and toothbrushing.</span></li><li><span class="kind k-p">Prep & team</span><span>Four Hyundai Motor Group mentors and two NGO mentors shared career advice at a mentor talk show.</span></li></ul></div>
+        <div class="dph"><figure><img src="img/fig27.jpg" alt="Toothbrushing practice" loading="lazy"><figcaption>Toothbrushing practice</figcaption></figure><figure><img src="img/fig28.jpg" alt="Oral hygiene demonstration" loading="lazy"><figcaption>Oral hygiene demonstration</figcaption></figure></div>
+      </article>
+      <article class="dcard" id="day07">
+        <div class="dmeta"><span class="dno">DAY 07</span><span class="ddate">Aug 1<small>Sat</small></span></div>
+        <div class="dtext"><h3>A school brought back to life by our hands</h3><ul><li><span class="kind k-w">Renovation</span><span>On the last renovation day, the mural, outdoor library and new swings were finished and the drainage area was cleaned up.</span></li><li><span class="kind k-e">Education</span><span>Volunteers made handmade soaps and handwashing guides with preschool teachers.</span></li><li><span class="kind k-p">Prep & team</span><span>A final rehearsal ahead of the closing ceremony.</span></li></ul></div>
+        <div class="dph"><figure><img src="img/fig20.jpg" alt="A child on the new swings" loading="lazy"><figcaption>A child on the new swings</figcaption></figure><figure><img src="img/fig31.jpg" alt="Making soaps" loading="lazy"><figcaption>Making soaps</figcaption></figure></div>
+      </article>
+      <article class="dcard" id="day08">
+        <div class="dmeta"><span class="dno">DAY 08</span><span class="ddate">Aug 2<small>Sun</small></span></div>
+        <div class="dtext"><h3>Becoming one team through cultural exchange</h3><ul><li><span class="kind k-c">Cultural exchange</span><span>At the closing ceremony, five teams took the stage with taekwondo, Vietnamese traditional dance, choir, a placard performance and fan dance.</span></li><li><span class="kind k-c">Cultural exchange</span><span>A visit to Bach Dang Giang, a landmark historic site of Hai Phong, offered another view of Vietnam.</span></li><li><span class="kind k-p">Prep & team</span><span>At the farewell party, awards, an activity video, handwritten messages and shared reflections closed the week.</span></li></ul></div>
+        <div class="dph"><figure><img src="img/blog_d8_6.jpg" alt="Placard performance" loading="lazy"><figcaption>Cultural performances</figcaption></figure><figure><img src="img/blog_d8_8.jpg" alt="Fan dance" loading="lazy"><figcaption>Fan dance</figcaption></figure></div>
+      </article>
+      <article class="dcard" id="day09">
+        <div class="dmeta"><span class="dno">DAY 09</span><span class="ddate">Aug 3<small>Mon</small></span></div>
+        <div class="dtext"><h3>Until we meet again</h3><ul><li><span class="kind k-t">Travel</span><span>Vietnamese volunteers came to Hanoi airport to see the team off.</span></li><li><span class="kind k-t">Travel</span><span>The team flew home with new friendships and memories.</span></li></ul></div>
+        <div class="dph one"><figure><img src="img/blog_d9_0.jpg" alt="With Vietnamese volunteers at the airport" loading="lazy"><figcaption>With Vietnamese volunteers at the airport</figcaption></figure></div>
+      </article>
+    </div>
+    </div>
+    <p class="note">※ Some photos are from the official Happy Move blog (Happy Log EP.03) and may not match the exact day.</p>
+  </div>
+</section>
+
+<section id="activities" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Activity results</div>
+    <h2 class="h2">Results by Activity</h2>
+    <p class="lead">Six stories of improving spaces for children, sharing learning and connecting with the community.</p>
+
+    <article class="act" id="a1">
+      <div class="act-head">
+        <span class="stage-tag">Renovation · Better spaces</span>
+        <span class="act-no">ACTIVITY 01</span>
+        <h3>Spaces that changed children’s days</h3>
+        <span class="where">Green library · mural · football playground · play area</span>
+        <div class="big"><div><b class="num">1,260<small>hrs</small></b><span>of direct volunteer labor</span></div><div><b class="num">3<small>sites</small></b><span>Green library · football playground · mural</span></div></div>
+      </div>
+      <div class="act-body">
+        <p class="theme-line">A waterlogged, unused area<br>was reborn as a place where children read, play and spend time together.</p>
+        <div><div class="ba-tabs" role="group" aria-label="Choose a site">
+            <button type="button" aria-pressed="true" data-pair="0">Green library</button>
+            <button type="button" aria-pressed="false" data-pair="1">Mural</button>
+            <button type="button" aria-pressed="false" data-pair="2">Schoolyard</button>
+          </div>
+          <div class="ba" id="ba" data-state="before" style="--pos:100%">
+            <img id="ba-b" src="img/fig03c.jpg" alt="Before" loading="lazy">
+            <img id="ba-a" class="after" src="img/fig04.jpg" alt="After" loading="lazy">
+            <div class="bar" aria-hidden="true"></div>
+            <input id="ba-range" type="range" min="0" max="100" value="100" aria-label="Before and after slider">
+            <div class="ba-switch" role="group" aria-label="Before / after">
+              <button type="button" id="ba-btn-b" aria-pressed="true">BEFORE</button>
+              <button type="button" id="ba-btn-a" aria-pressed="false">AFTER</button>
+            </div>
+          </div>
+          <p class="ba-cap" id="ba-cap">Waterlogged, unused area → the new green library</p></div>
+        <div>
+          <h4>What we built together</h4>
+          <p>We built an outdoor green library and set up a reading hut.<br>We renovated the football playground and play area, and added bright, meaningful murals around the school.</p>
+        </div>
+        <div>
+          <h4>What changes for children</h4>
+          <div class="effects"><div><b>Closer to books</b>Children now have a comfortable place at school to read and learn with friends.</div><div><b>Safer places to play</b>Improved drainage and ground mean children can exercise and play more safely.</div><div><b>A school to be proud of</b>Brighter, more pleasant spaces help children feel attached to and proud of their school.</div></div>
+        </div>
+        <div class="learned">
+          <h4>And what we learned</h4>
+          <p>From concrete and tiling to drainage and painting,<br>we learned on site by changing spaces with our own hands.</p><p>Working together across languages and cultures,<br>we learned how to cooperate and came to know the people of Hai Phong a little better.</p>
+        </div>
+        
+        <div><h4>On site together</h4><div class="gal">
+            <figure><img src="img/fig11.jpg" alt="" loading="lazy"><figcaption>Digging the drainage channel around the football playground</figcaption></figure>
+            <figure><img src="img/fig12.jpg" alt="" loading="lazy"><figcaption>Painting the mural</figcaption></figure>
+            <figure><img src="img/fig13.jpg" alt="" loading="lazy"><figcaption>Building the drainage channel</figcaption></figure>
+            <figure><img src="img/fig14.jpg" alt="" loading="lazy"><figcaption>Making the library gates</figcaption></figure>
+            <figure><img src="img/fig15.jpg" alt="" loading="lazy"><figcaption>Decorating the reading hut</figcaption></figure>
+            <figure><img src="img/fig16.jpg" alt="" loading="lazy"><figcaption>Tiling the library floor</figcaption></figure>
+            <figure><img src="img/fig17.jpg" alt="" loading="lazy"><figcaption>Carrying concrete</figcaption></figure>
+            <figure><img src="img/fig18.jpg" alt="" loading="lazy"><figcaption>Volunteers in front of their finished work</figcaption></figure>
+            <figure><img src="img/fig19.jpg" alt="" loading="lazy"><figcaption>Painting the library fence</figcaption></figure>
+            <figure><img src="img/fig20.jpg" alt="" loading="lazy"><figcaption>Children on the swings</figcaption></figure>
+          </div></div>
+      </div>
+    </article>
+
+    <article class="act" id="a2">
+      <div class="act-head">
+        <span class="stage-tag">Education · STEAM Camp</span>
+        <span class="act-no">ACTIVITY 02</span>
+        <h3>STEAM EDUCATION CAMP</h3>
+        <span class="where">STEAM experiential learning · Tu Cuong Secondary School</span>
+        <div class="big"><div><b class="num">178</b><span>students in hands-on learning</span></div><div><b class="num">3<small>sessions</small></b><span>participatory, hands-on</span></div></div>
+      </div>
+      <div class="act-body">
+        <p class="theme-line">Science and engineering, once only in textbooks,<br>became something students built and tested with their own hands.</p>
+        <div class="steam">
+          <div class="steam-row">
+            <ul class="steam-letters" aria-label="STEAM"><li><b>S</b><span>Science</span></li><li><b>T</b><span>Technology</span></li><li><b>E</b><span>Engineering</span></li><li><b>A</b><span>Arts</span></li><li><b>M</b><span>Math</span></li></ul>
+            <p class="steam-def">An integrated approach that weaves science, technology, engineering, arts and math together so children learn by making and testing.</p>
+          </div>
+          <details class="steam-more">
+            <summary>More about the STEAM Education Camp</summary>
+            <div class="steam-body">
+              <div class="steam-banner"><span>Happy Move STEAM Education Camp</span><b>Camp leaders who design and run their own STEAM content</b></div>
+              <p>This participatory camp follows the STEAM education direction of Vietnam’s Ministry of Education. Going beyond conventional volunteering, Happy Move volunteers take part as <b>camp leaders</b> who design and run STEAM (science, technology, engineering, arts, math) content themselves.</p>
+              <div class="steam-cards"><div class="sc"><span class="sc-no">01</span><b>Understanding STEAM</b><ul><li>Principles of integrated learning</li><li>Vietnam’s education direction</li><li>Knowing local children</li></ul></div><div class="sc"><span class="sc-no">02</span><b>Content design & demo</b><ul><li>Team STEAM activity design</li><li>Demos and feedback</li><li>Finalizing and testing lesson plans</li></ul></div><div class="sc"><span class="sc-no">03</span><b>Culture- and language-aware delivery</b><ul><li>Participatory teaching methods</li><li>Overcoming language barriers</li><li>Cultural sensitivity</li></ul></div><div class="sc"><span class="sc-no">04</span><b>Teamwork & facilitation</b><ul><li>Collaborative delivery skills</li><li>On-site facilitation practice</li><li>Co-led by Korean and Vietnamese youth</li></ul></div></div>
+            </div>
+          </details>
+        </div>
+        <div><h4>10 STEAM explorations prepared by the volunteers</h4><div class="chips">
+            <div><b>1A</b>Beat the rainy season! A house that withstands wind and rain</div>
+            <div><b>1B</b>Upcycled balloon-powered eco boat</div>
+            <div><b>2A</b>Mosquito trap and repellent bracelet</div>
+            <div><b>2B</b>Light up your dreams: wind-powered lighthouse</div>
+            <div><b>3A</b>Eco-friendly water wheel</div>
+            <div><b>3B</b>Tangram paper folding</div>
+            <div><b>4A</b>Hai Phong eco driver: mini-car racing</div>
+            <div><b>4B</b>Three types of mini airplanes</div>
+            <div><b>5A</b>My own safety hero: DIY keyring</div>
+            <div><b>5B</b>Rubber band-powered recycled car</div>
+          </div></div>
+        <div>
+          <h4>What we built together</h4>
+          <p>Korean and Vietnamese volunteers designed lesson plans and prepared materials together, running three hands-on sessions with 178 secondary students.<br>Students worked in teams to build, test and present their STEAM products.</p>
+        </div>
+        <div>
+          <h4>What changed for children</h4>
+          <div class="effects"><div><b>The joy of learning by doing</b>By experimenting and trying again, they applied classroom knowledge to real situations.</div><div><b>Room to think</b>They built creativity, critical thinking and confidence in testing ideas.</div><div><b>A reason to love science</b>Solving problems together built teamwork and greater interest in math, science and engineering.</div></div>
+        </div>
+        <div class="learned">
+          <h4>And what we learned</h4>
+          <p>Sharing ideas and dividing roles,<br>we learned to adapt lessons to students’ needs.</p><p>Meeting 178 students in person showed us the value of our work,<br>and deepened our responsibility and empathy toward the community.</p>
+        </div>
+        <div class="gal">
+          <figure><img src="img/fig21.jpg" alt="" loading="lazy"><figcaption>Volunteers helping students choose groups</figcaption></figure>
+          <figure><img src="img/fig23.jpg" alt="" loading="lazy"><figcaption>STEAM product exhibition</figcaption></figure>
+          <figure><img src="img/fig24.jpg" alt="" loading="lazy"><figcaption>STEAM class</figcaption></figure>
+          <figure><img src="img/fig25.jpg" alt="" loading="lazy"><figcaption>Students experimenting with a model</figcaption></figure>
+          <figure><img src="img/fig26.jpg" alt="" loading="lazy"><figcaption>A volunteer guiding a student</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="act" id="a3">
+      <div class="act-head">
+        <span class="stage-tag">Education · Oral hygiene</span>
+        <span class="act-no">ACTIVITY 03</span>
+        <h3>Healthy habits, every day</h3>
+        <span class="where">Oral hygiene session “Healthy Explorers” · Tu Cuong Preschool</span>
+        <div class="big"><div><b class="num">275</b><span>children received hygiene kits</span></div></div>
+      </div>
+      <div class="act-body">
+        <p class="theme-line">Through play, children learned brushing and handwashing —<br>healthy habits they can keep up every day.</p>
+        <div><h4>Healthy Explorers lesson flow</h4><div class="chips">
+            <div><b>Mission 1</b>Find the cavity monster — why cavities happen</div>
+            <div><b>Mission 2</b>Strong brushing — 3 times a day, within 3 minutes of eating, for 3 minutes</div>
+            <div><b>Mission 3</b>Sparkle practice — toothbrushing in small groups</div>
+            <div><b>Wrap-up</b>Oral care kits · group photo</div>
+          </div></div>
+        <div>
+          <h4>What we built together</h4>
+          <p>After the volunteers’ performances and demonstrations, children practiced the steps of toothbrushing and handwashing in class.<br>275 children received individual hygiene kits.</p>
+        </div>
+        <div>
+          <h4>What changed for children</h4>
+          <div class="effects"><div><b>Self-care habits</b>They learned correct toothbrushing and handwashing by doing it.</div><div><b>Health made fun</b>Lively performances built positive attitudes toward healthy routines and self-care.</div><div><b>Habits that continue at home</b>With teachers and parents involved and kits in hand, children can keep these habits at school and at home.</div></div>
+        </div>
+        <div class="learned">
+          <h4>And what we learned</h4>
+          <p>We learned to turn technical hygiene steps<br>into age-appropriate stories, dances and hands-on activities.</p>
+        </div>
+        
+        <div class="gal">
+          <figure><img src="img/fig27.jpg" alt="" loading="lazy"><figcaption>Toothbrushing practice</figcaption></figure>
+          <figure><img src="img/fig28.jpg" alt="" loading="lazy"><figcaption>Demonstration on stage</figcaption></figure>
+          <figure><img src="img/fig29.jpg" alt="" loading="lazy"><figcaption>Excited children</figcaption></figure>
+          <figure><img src="img/fig30.jpg" alt="" loading="lazy"><figcaption>Demonstration dance by volunteers</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="act" id="a4">
+      <div class="act-head">
+        <span class="stage-tag">Education · Toy-making</span>
+        <span class="act-no">ACTIVITY 04</span>
+        <h3>Learning kits handmade with care for children</h3>
+        <span class="where">Toy-making · with Tu Cuong Preschool teachers</span>
+        <div class="big"><div><b class="num">300<small>sets</small></b><span>Handmade soaps · handwashing guides</span></div></div>
+      </div>
+      <div class="act-body">
+        <p class="theme-line">Soaps and handwashing guides made with preschool teachers<br>travel home in children’s hands.</p>
+        
+        <div>
+          <h4>What we built together</h4>
+          <p>All Tu Cuong Preschool teachers worked with the volunteers<br>to produce 300 educational sets of handmade soaps and visual handwashing guides.</p>
+        </div>
+        <div>
+          <h4>What changes for children</h4>
+          <div class="effects"><div><b>Made for the classroom</b>Teachers took part directly, so the materials fit real classroom needs.</div><div><b>Learning that goes home</b>Children take the kits home, turning handwashing into a fun daily habit.</div><div><b>New tools for teachers</b>Teachers gained new ideas for interactive health education.</div></div>
+        </div>
+        <div class="learned">
+          <h4>And what we learned</h4>
+          <p>Co-designing materials with local teachers,<br>we learned to adapt content for early childhood.</p><p>Making things together built real relationships with local educators.</p>
+        </div>
+        
+        <div class="gal lg">
+          <figure><img src="img/fig31.jpg" alt="" loading="lazy"><figcaption>Making soaps</figcaption></figure>
+          <figure><img src="img/fig32.jpg" alt="" loading="lazy"><figcaption>Making instruction boards</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="act" id="a5">
+      <div class="act-head">
+        <span class="stage-tag">Community giving · Bicycles</span>
+        <span class="act-no">ACTIVITY 05</span>
+        <h3>Bringing school a little closer</h3>
+        <span class="where">Bicycle distribution · with Quyet Thang People’s Committee</span>
+        <div class="big"><div><b class="num">20<small>bikes</small></b><span>for 20 students from disadvantaged families</span></div></div>
+      </div>
+      <div class="act-body">
+        <p class="theme-line">Children from the most disadvantaged families now have bicycles for school.<br>Less time on the road means more time to learn and rest.</p>
+        
+        <div>
+          <h4>What we built together</h4>
+          <p>Quyet Thang People’s Committee selected 20 students from the most disadvantaged families,<br>and Hyundai Motor Group and World Vision presented 20 bicycles for their school travel.</p>
+        </div>
+        <div>
+          <h4>What changes for children</h4>
+          <div class="effects"><div><b>More time to learn</b>Shorter travel leaves more time for study, homework and extracurricular activities.</div><div><b>Enough rest</b>Better rest means better focus in class.</div><div><b>Staying in school</b>Bicycles help reduce dropout and improve secondary school enrollment.</div></div>
+        </div>
+        <div class="learned">
+          <h4>And the trust we built</h4>
+          <p>With the local government selecting students and joining the handover,<br>the partnership showed respect for local administrative structures.</p><p>This trust lays a foundation for longer-term collaboration.</p>
+        </div>
+        
+        <div class="gal lg">
+          <figure><img src="img/fig33.jpg" alt="" loading="lazy"><figcaption>HMG and World Vision leaders presenting bicycles</figcaption></figure>
+          <figure><img src="img/fig34.jpg" alt="" loading="lazy"><figcaption>20 bicycles</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="act" id="a6">
+      <div class="act-head">
+        <span class="stage-tag">Cultural exchange · Performances</span>
+        <span class="act-no">ACTIVITY 06</span>
+        <h3>Together on one stage</h3>
+        <span class="where">Cultural performances · Bach Dang Giang visit</span>
+        <div class="big"><div><b class="num">8</b><span>performances (5 by volunteers · 3 local)</span></div></div>
+      </div>
+      <div class="act-body">
+        <p class="theme-line">Korean and Vietnamese youth, local teenagers and children shared one stage,<br>singing and dancing to celebrate each other’s cultures.</p>
+        <div><h4>Team performances</h4>
+          <div class="tshow" id="tshow">
+            <div class="ts-stage"><div class="tslide on" data-i="0">
+              <img src="img/blog_d8_0.jpg" alt="Team 1 performance" loading="lazy">
+              <img src="img/blog_d8_1.jpg" alt="Team 1 group photo" loading="lazy">
+              <div class="ts-cap"><span class="tm-no">Team 1</span><b>Taekwondo & K-POP</b><span>A powerful K-POP dance with taekwondo moves</span></div>
+            </div><div class="tslide" data-i="1">
+              <img src="img/blog_d8_2.jpg" alt="Team 2 performance" loading="lazy">
+              <img src="img/blog_d8_3.jpg" alt="Team 2 group photo" loading="lazy">
+              <div class="ts-cap"><span class="tm-no">Team 2</span><b>Vietnamese traditional dance & K-POP</b><span>Dances from both countries joined in one performance</span></div>
+            </div><div class="tslide" data-i="2">
+              <img src="img/blog_d8_4.jpg" alt="Team 3 performance" loading="lazy">
+              <img src="img/blog_d8_5.jpg" alt="Team 3 group photo" loading="lazy">
+              <div class="ts-cap"><span class="tm-no">Team 3</span><b>Choir & Baby Shark</b><span>A sing-along choir with easy moves for everyone</span></div>
+            </div><div class="tslide" data-i="3">
+              <img src="img/blog_d8_6.jpg" alt="Team 4 performance" loading="lazy">
+              <img src="img/blog_d8_7.jpg" alt="Team 4 group photo" loading="lazy">
+              <div class="ts-cap"><span class="tm-no">Team 4</span><b>Placard performance</b><span>A witty dance with HAPPY MOVE placards</span></div>
+            </div><div class="tslide" data-i="4">
+              <img src="img/blog_d8_8.jpg" alt="Team 5 performance" loading="lazy">
+              <img src="img/blog_d8_9.jpg" alt="Team 5 group photo" loading="lazy">
+              <div class="ts-cap"><span class="tm-no">Team 5</span><b>Fan dance & K-POP</b><span>Korean traditional fan dance meets K-POP</span></div>
+            </div>
+            </div>
+            <div class="ts-tabs" role="group" aria-label="Choose a team"><button type="button" data-i="0" aria-pressed="true">Team 1</button><button type="button" data-i="1" aria-pressed="false">Team 2</button><button type="button" data-i="2" aria-pressed="false">Team 3</button><button type="button" data-i="3" aria-pressed="false">Team 4</button><button type="button" data-i="4" aria-pressed="false">Team 5</button><button type="button" class="ts-pause" id="tspause" aria-pressed="false" data-pause="Pause" data-play="Play">Pause</button><span class="ts-bar"><i id="tsbar"></i></span></div>
+          </div></div>
+        <div>
+          <h4>What we built together</h4>
+          <p>Five performances by Happy Move volunteers and three by local youth and children created a lively platform for Vietnamese–Korean cultural exchange.<br>A visit to Bach Dang Giang, one of Hai Phong’s most significant historical and cultural sites, taught the volunteers about the city’s history and heritage.</p>
+        </div>
+        <div>
+          <h4>What we shared</h4>
+          <div class="effects"><div><b>Mutual understanding</b>People of both countries came to understand each other’s cultures.</div><div><b>Closer to the community</b>Korean volunteers and the Quyet Thang community grew closer.</div><div><b>Knowing Hai Phong</b>The Bach Dang Giang visit deepened understanding of Hai Phong’s history and identity.</div></div>
+        </div>
+        <div class="learned">
+          <h4>And what we learned</h4>
+          <p>Across different languages and cultures,<br>preparing the stage together taught us to become one team.</p>
+        </div>
+        <figure class="quote">
+          <p>“For me, this was more than just a volunteer trip. It was also a vibrant chapter of international connection, cultural exchange, and meaningful shared experiences.”</p>
+          <cite>Vi Thai Tuan · Team 4 · Vietnamese university volunteer</cite>
+        </figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="voices">
+  <div class="wrap">
+    <div class="eyebrow">Voices</div>
+    <h2 class="h2">Voices from the Field</h2>
+    <div class="voices">
+      <div class="voice"><span class="who">Local government</span><p>“World Vision in Vietnam, World Vision Korea and Hyundai Motor Group have collaborated well to create this very meaningful program. The Korean students have shown us their passion and youth energy, their desire to contribute, and their deep sense of responsibility to the community.”</p><cite>Ms. Ha Dam Thanh Van · Vice Chairperson, Quyet Thang People’s Committee</cite></div>
+      <div class="voice"><span class="who">Korean volunteer</span><p>“I’m very impressed with the children’s smiles and their enthusiasm. I hope that these activities will be helpful to them and the program will be a beautiful memory for all of us.”</p><cite>Kim Yunsoo · Team 2</cite></div>
+      <div class="voice"><span class="who">Vietnamese university volunteer</span><p>“Holding the certificate in my hands after days of passionate and energetic activities, I was truly overwhelmed with emotion. I feel incredibly honored, proud, and grateful to have been selected as one of the 10 Local Supporters in Vietnam to accompany such a large-scale international project.”</p><cite>Vi Thai Tuan · Team 4</cite></div>
+    </div>
+    <div class="letter">
+      <img src="img/fig02.png" alt="First page of the letter from Quyet Thang People’s Committee (Vietnamese)" loading="lazy">
+      <div class="letter-tx">
+        <div class="eyebrow">Letter of thanks</div>
+        <h3 style="font-size:22px;font-weight:900;margin-top:6px">Letter of gratitude from Quyet Thang People’s Committee</h3>
+        <p class="lead">August 4, 2026 · To World Vision Korea, World Vision International in Vietnam and Hyundai Motor Group</p>
+        <blockquote class="letter-q">“We believe that investing in children is investing in the future; every good deed today contributes to nurturing a compassionate community where every child has the opportunity to learn, develop, and pursue their dreams.”</blockquote>
+        <p class="letter-sign">Dang Van Khoi, Chairperson, Quyet Thang People’s Committee</p>
+        <details class="letter-more">
+          <summary>Read the full letter</summary>
+          <div class="letter-body">
+            <p>On behalf of the People’s Committee of Quyet Thang Commune, Hai Phong City, I would like to send to your Organizations, the donor, and all staff, experts, as well as Vietnamese and Korean volunteers our best wishes for health and happiness, alongside our sincere gratitude for the warm sentiment and invaluable partnership you have extended to our locality.</p>
+            <p>The 2026 "Happy Move" Volunteer Program has come to an end, but the humanistic values it brought will continue to spread throughout our community. The completed works, meaningful experiential activities, and especially the bright smiles of the children serve as vivid evidence of the power of sharing, responsibility, and the shared aspiration to build a better future together.</p>
+            <p>Quyet Thang Commune deeply appreciates the companionship of World Vision Korea, World Vision International in Vietnam, and Hyundai Motor Group in this journey of caring for children and developing the community. The strong connection between international organizations, corporate partners, and local government not only brings practical results today but also fosters the friendship between Vietnam and Republic of Korea through actions that are highly humanistic, sustainable, and deeply meaningful.</p>
+            <p>For Quyet Thang Commune, the program has left behind not only tangible values but also inspiration regarding solidarity, social responsibility, and trust in the power of cooperation. We believe that investing in children is investing in the future; every good deed today contributes to nurturing a compassionate community where every child has the opportunity to learn, develop, and pursue their dreams.</p>
+            <p>In the spirit of open and trustworthy cooperation, the People’s Committee of Quyet Thang Commune hopes to continue partnering with World Vision Korea, World Vision International in Vietnam, Hyundai Motor Group, and South Korean partners in many more practical programs for children, the community, and sustainable development goals. The local authority commits to being a responsible partner, creating all favorable conditions to effectively implement future collaborative initiatives alongside your Organizations and Corporation.</p>
+            <p>We respectfully extend our deepest gratitude to your Organizations, the donor, and all volunteers who have brought to the children and residents of Quyet Thang Commune not only meaningful works and activities, but also faith, love, and care. We warmly welcome you to return as close friends of our locality, to continue writing beautiful stories of cooperation, social responsibility, and sustainable development for the happiness of children and for a brighter future for both Vietnamese and Korean communities.</p>
+            <p class="letter-sign">ON BEHALF OF THE PEOPLE’S COMMITTEE<br>CHAIRPERSON Dang Van Khoi (Signed &amp; Sealed)</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="people" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Participants</div>
+    <h2 class="h2">Participants and Beneficiaries</h2>
+    <p class="lead">947 direct participants and 1,672 direct beneficiaries.</p>
+    <div class="two">
+      <div class="bars" id="pbars" aria-hidden="true"></div>
+      <div>
+        <div class="tbl-wrap"><table class="t" style="min-width:0">
+          <thead><tr><th>Group</th><th class="r">Direct participants</th><th class="r">Direct beneficiaries</th></tr></thead>
+          <tbody>
+            <tr><td>Secondary students</td><td class="r">220</td><td class="r">198*</td></tr>
+            <tr><td>Primary students</td><td class="r">30</td><td class="r">563</td></tr>
+            <tr><td>Preschool children</td><td class="r">240</td><td class="r">275</td></tr>
+            <tr><td>Teachers</td><td class="r">85</td><td class="r">73</td></tr>
+            <tr><td>Parents</td><td class="r">372</td><td class="r">563</td></tr>
+            <tr><td><b>Total</b></td><td class="r"><b>947</b></td><td class="r"><b>1,672</b></td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">* The 198 secondary-student beneficiaries comprise 178 STEAM participants and 20 bicycle recipients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="media">
+  <div class="wrap">
+    <div class="eyebrow">In the news</div>
+    <h2 class="h2">Media Coverage</h2>
+    <p class="lead">Happy Move was covered by 4 Vietnamese outlets, 3 Hai Phong TV newscasts and 1 LinkedIn page.</p>
+
+    <div class="press">
+      <a class="pc lead-card" href="https://baohaiphong.vn/dau-an-tuan-le-tinh-nguyen-hyundai-happy-move-tai-hai-phong-549518.html" target="_blank" rel="noopener" data-brief="https://baohaiphong.vn/dau-an-tuan-le-tinh-nguyen-hyundai-happy-move-tai-hai-phong-549518.html">
+        <div class="th"><img src="img/media_bhp.jpg" alt="Báo Hải Phòng article image" loading="lazy"><span class="outlet">Báo Hải Phòng</span></div>
+        <div class="tx"><span class="ty">Hai Phong daily</span><b>The mark left by the Hyundai Happy Move volunteer week in Hai Phong</b><span class="orig">Dấu ấn tuần lễ tình nguyện Hyundai Happy Move tại Hải Phòng</span><span class="go">Summary →</span></div>
+      </a>
+      <a class="pc" href="https://daibieunhandan.vn/hanh-trinh-happy-move-2026-tinh-nguyen-vien-quoc-te-dong-hanh-cung-tre-em-hai-phong-10425771.html" target="_blank" rel="noopener" data-brief="https://daibieunhandan.vn/hanh-trinh-happy-move-2026-tinh-nguyen-vien-quoc-te-dong-hanh-cung-tre-em-hai-phong-10425771.html">
+        <div class="th"><img src="img/media_dbnd.jpg" alt="Đại biểu Nhân dân article image" loading="lazy"><span class="outlet">Đại biểu Nhân dân</span></div>
+        <div class="tx"><span class="ty">Aug 2, 2026</span><b>Happy Move 2026 journey: international volunteers accompany children in Hai Phong</b><span class="orig">Hành trình Happy Move 2026: Tình nguyện viên quốc tế đồng hành cùng trẻ em Hải Phòng</span><span class="go">Summary →</span></div>
+      </a>
+      <a class="pc" href="https://thoidai.com.vn/sinh-vien-viet-nam-han-quoc-chung-tay-vi-tre-em-hai-phong-755573.html" target="_blank" rel="noopener" data-brief="https://thoidai.com.vn/sinh-vien-viet-nam-han-quoc-chung-tay-vi-tre-em-hai-phong-755573.html">
+        <div class="th"><img src="img/media_td.jpg" alt="Thời Đại article image" loading="lazy"><span class="outlet">Thời Đại</span></div>
+        <div class="tx"><span class="ty">Aug 2, 2026</span><b>Vietnamese and Korean students join hands for Hai Phong’s children</b><span class="orig">Sinh viên Việt Nam, Hàn Quốc chung tay vì trẻ em Hải Phòng</span><span class="go">Summary →</span></div>
+      </a>
+      <a class="pc" href="https://www.vietnam.vn/en/hanh-trinh-happy-move-2026-tinh-nguyen-vien-quoc-te-dong-hanh-cung-tre-em-hai-phong" target="_blank" rel="noopener" data-brief="https://www.vietnam.vn/en/hanh-trinh-happy-move-2026-tinh-nguyen-vien-quoc-te-dong-hanh-cung-tre-em-hai-phong">
+        <div class="th"><img src="img/media_vn.jpg" alt="Vietnam.vn article image" loading="lazy"><span class="outlet">Vietnam.vn</span></div>
+        <div class="tx"><span class="ty">English article</span><b>Happy Move 2026 Journey: International Volunteers Accompany Children in Hai Phong</b><span class="go">Summary →</span></div>
+      </a>
+    </div>
+
+    <div class="onair-head"><span class="live-dot" aria-hidden="true"></span><b>ON AIR</b><span>Hai Phong Television (THP) news</span></div>
+    <div class="tv">
+      <a class="tvc has-th" href="https://thhp.vn/ban-tin-thoi-su-cuoi-ngay-03-08-2026-55424.html" target="_blank" rel="noopener" data-brief="https://thhp.vn/ban-tin-thoi-su-cuoi-ngay-03-08-2026-55424.html"><img class="tv-th" src="img/media_tv0803.jpg" alt="" loading="lazy">
+        <span class="play" aria-hidden="true">▶</span><span class="ch">THP</span>
+        <b>Aug 3 (Mon)</b><span>Evening news</span><span class="ts">at 7:14 in the video</span>
+      </a>
+      <a class="tvc has-th" href="https://thhp.vn/ban-tin-thoi-su-sang-04-08-2026-55425.html" target="_blank" rel="noopener" data-brief="https://thhp.vn/ban-tin-thoi-su-sang-04-08-2026-55425.html"><img class="tv-th" src="img/media_tv0804.jpg" alt="" loading="lazy">
+        <span class="play" aria-hidden="true">▶</span><span class="ch">THP</span>
+        <b>Aug 4 (Tue)</b><span>Morning news</span><span class="ts">at 5:00 in the video</span>
+      </a>
+      <a class="tvc has-th" href="https://thhp.vn/ban-tin-thoi-su-17h00-07-08-2026-55594.html" target="_blank" rel="noopener" data-brief="https://thhp.vn/ban-tin-thoi-su-17h00-07-08-2026-55594.html"><img class="tv-th" src="img/media_tv0807.jpg" alt="" loading="lazy">
+        <span class="play" aria-hidden="true">▶</span><span class="ch">THP</span>
+        <b>Aug 7 (Fri)</b><span>5 p.m. news</span><span class="ts">at 19:20 in the video</span>
+      </a>
+      <a class="tvc sns" href="https://www.linkedin.com/company/wvivietnam/" target="_blank" rel="noopener">
+        <span class="play" aria-hidden="true">↗</span><span class="ch">in</span>
+        <b>World Vision Vietnam</b><span>Official LinkedIn page</span><span class="ts">See #HappyMove2026 updates</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="next" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Lessons &amp; next steps</div>
+    <h2 class="h2">Lessons and Next Steps</h2>
+    <div class="lessons">
+      <div><h3><span class="emo" aria-hidden="true">👍</span> What worked well</h3><ul>
+        <li>Happy Move volunteers demonstrated a strong sense of community responsibility and a high level of enthusiasm and commitment to contributing to local development.</li>
+        <li>Strong collaboration among HMG, World Vision, and participating schools enabled the program activities to be effectively coordinated and implemented.</li>
+        <li>Strong support and facilitation from the Quyet Thang People’s Committee contributed to the smooth implementation of the program.</li>
+        <li>High levels of participation and engagement from children, teachers, parents, and community members created a strong sense of local ownership and community involvement.</li>
+      </ul></div>
+      <div><h3><span class="emo" aria-hidden="true">🌧️</span> Challenges</h3><ul>
+        <li>Rainy weather during most mornings made the school renovation activities more challenging and required additional effort from the volunteers.</li>
+        <li>As this was Happy Move’s first program in Vietnam and in Quyet Thang, aligning ways of working with local partners took extra effort.</li>
+      </ul></div>
+      <div><h3><span class="emo" aria-hidden="true">💡</span> Recommendations for future programs</h3><ul>
+        <li>Maintain the strong momentum and collaborative partnership among HMG, World Vision, local authorities, schools, and communities to build positive results and sustain engagement.</li>
+        <li>Start preparation earlier so there is enough time to align with local partners.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<dialog id="brief" class="brief" aria-labelledby="brief-t">
+  <div class="br-img"><img id="brief-img" src="" alt=""><span class="br-outlet" id="brief-outlet"></span></div>
+  <div class="br-body">
+    <span class="br-kind" id="brief-kind"></span>
+    <h3 id="brief-t"></h3>
+    <p class="br-orig" id="brief-orig"></p>
+    <ul id="brief-list"></ul>
+    <p class="br-note">Summaries are based on the original articles.</p>
+    <div class="br-act"><a id="brief-link" href="#" target="_blank" rel="noopener"></a><button type="button" id="brief-close">Close</button></div>
+  </div>
+</dialog>
+<footer>
+  <div class="wrap">
+    <div><b>Hyundai Motor Group Happy Move 2026 · Vietnam</b></div>
+    <div>Contact: World Vision Corporate Partnership Team</div>
+  </div>
+</footer></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // before/after pairs (report figures 3–10)
+  var pairs=[
+    ["img/fig03c.jpg","img/fig04.jpg","Waterlogged, unused area → the new green library"],
+    ["img/fig05c.jpg","img/fig06.jpg","Degraded wall → the wall with a new mural"],
+    ["img/fig09.jpg","img/fig10.jpg","Yard before painting → an educational game painted on the ground"]
+  ];
+  var ba=document.getElementById('ba'),b=document.getElementById('ba-b'),a=document.getElementById('ba-a'),cap=document.getElementById('ba-cap'),
+      bb=document.getElementById('ba-btn-b'),ab=document.getElementById('ba-btn-a');
+  var rng=document.getElementById('ba-range');
+  var setPos=function(p,anim){ba.classList.toggle('anim',!!anim);ba.style.setProperty('--pos',p+'%');rng.value=p;
+    rng.setAttribute('aria-valuetext',p>=100?'BEFORE':(p<=0?'AFTER':'AFTER '+(100-p)+'%'));var st=p>=50?'before':'after';ba.dataset.state=st;bb.setAttribute('aria-pressed',p>=100);ab.setAttribute('aria-pressed',p<=0);ba.classList.toggle('edge',p<=0||p>=100)};
+  var setState=function(st){setPos(st==='before'?100:0,true)};
+  rng.addEventListener('input',function(){setPos(+rng.value,false)});
+  bb.addEventListener('click',function(){setState('before')});
+  ab.addEventListener('click',function(){setState('after')});
+  setPos(100,false);
+  document.querySelectorAll('.ba-tabs button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var p=pairs[+btn.dataset.pair];b.src=p[0];a.src=p[1];cap.textContent=p[2];setState('before');
+      document.querySelectorAll('.ba-tabs button').forEach(function(x){x.setAttribute('aria-pressed',x===btn?'true':'false')});
+    });
+  });
+
+  // participants bars (R §3) — one scale, max 563
+  var P=[["Secondary students",220,198],["Primary students",30,563],["Preschool children",240,275],["Teachers",85,73],["Parents",372,563]];
+  var pm=563,pb=document.getElementById('pbars');
+  pb.innerHTML=P.map(function(d){return '<div class="bar-row"><span class="lbl">'+d[0]+'</span><div class="bar-pair">'+
+    '<div class="bar-line"><i style="width:'+(d[1]/pm*80)+'%"></i>Participants '+d[1]+'</div>'+
+    '<div class="bar-line b"><i style="width:'+(d[2]/pm*80)+'%"></i>Beneficiaries '+d[2]+'</div></div></div>'}).join('')+
+    '<div class="legend"><span><i style="background:var(--line-strong)"></i>Direct participants</span><span><i style="background:var(--accent)"></i>Direct beneficiaries</span></div>';
+
+
+  // day slider
+  var tr=document.getElementById('dtrack');
+  if(tr){
+    var cards=[].slice.call(tr.querySelectorAll('.dcard')),cur=document.getElementById('dcur'),
+        prev=document.getElementById('dprev'),next=document.getElementById('dnext'),
+        chips=[].slice.call(document.querySelectorAll('.daynav a'));
+    var idx=function(){var x=tr.scrollLeft,b=0,bd=1e9;cards.forEach(function(c,i){var d=Math.abs(c.offsetLeft-tr.offsetLeft-x);if(d<bd){bd=d;b=i}});return b};
+    var curI=0;var go=function(i){i=Math.max(0,Math.min(cards.length-1,i));curI=i;tr.scrollTo({left:cards[i].offsetLeft,behavior:RM?'auto':'smooth'});sync(i)};
+    window.addEventListener('resize',function(){tr.scrollTo({left:cards[curI].offsetLeft})});
+    var sync=function(k){var i=(typeof k==='number')?k:idx();curI=i;cur.textContent=('0'+(i+1)).slice(-2);prev.disabled=i===0;next.disabled=i===cards.length-1;chips.forEach(function(c,j){c.classList.toggle('on',j===i)})};
+    prev.addEventListener('click',function(){go(curI-1)});
+    next.addEventListener('click',function(){go(curI+1)});
+    chips.forEach(function(c,j){c.addEventListener('click',function(e){e.preventDefault();go(j)})});
+    tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(curI+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(curI-1)}});
+    var t;tr.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(sync,80)});
+    // swipe on touch
+    var sx=null;tr.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+    tr.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)go(curI+(dx<0?1:-1));sx=null});
+    sync();
+  }
+
+  // in-page links: scroll by script so they work inside the artifact frame
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    if(a.closest('.daynav'))return;
+    a.addEventListener('click',function(e){
+      var t=document.getElementById(a.getAttribute('href').slice(1));
+      if(!t)return;e.preventDefault();
+      var y=t.getBoundingClientRect().top+window.pageYOffset-72;
+      window.scrollTo({top:y,behavior:RM?'auto':'smooth'});
+    });
+  });
+
+  // team slideshow (auto)
+  var tsh=document.getElementById('tshow');
+  if(tsh){
+    var sl=[].slice.call(tsh.querySelectorAll('.tslide')),tb=[].slice.call(tsh.querySelectorAll('.ts-tabs button[data-i]')),bar=document.getElementById('tsbar'),
+        tp=document.getElementById('tspause'),ti=0,dur=4500,t0=0,prog=0,hover=false,user=false,vis=true,raf=0,
+        reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){user=true;tp.setAttribute('aria-pressed','true');tp.textContent=tp.dataset.play||'Play'}
+    var running=function(){return !hover&&!user&&vis};
+    var show=function(i){ti=(i+sl.length)%sl.length;sl.forEach(function(x,j){var on=j===ti;x.classList.toggle('on',on);x.setAttribute('aria-hidden',on?'false':'true')});tb.forEach(function(x,j){x.setAttribute('aria-pressed',j===ti)});prog=0;t0=performance.now();bar.style.width='0%'};
+    var tick=function(now){raf=0;if(!running())return;var p=prog+(now-t0)/dur;if(p>=1){show(ti+1);p=0}bar.style.width=(p*100)+'%';raf=requestAnimationFrame(tick)};
+    var resume=function(){if(!raf&&running()){t0=performance.now();raf=requestAnimationFrame(tick)}};
+    var hold=function(){prog=parseFloat(bar.style.width||0)/100};
+    tb.forEach(function(b,j){b.addEventListener('click',function(){show(j);resume()})});
+    tp.addEventListener('click',function(){user=!user;tp.setAttribute('aria-pressed',user);tp.textContent=user?(tp.dataset.play||'Play'):(tp.dataset.pause||'Pause');if(user)hold();else resume()});
+    tsh.addEventListener('mouseenter',function(){hover=true;hold()});
+    tsh.addEventListener('mouseleave',function(){hover=false;resume()});
+    if('IntersectionObserver' in window){new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)resume();else hold()}).observe(tsh)}
+    show(0);resume();
+  }
+
+  // satellite map (Leaflet, local tiles)
+  var mapEl=document.getElementById('leafmap');
+  if(mapEl&&window.L){
+    var B={"commune":{"type":"Polygon","coordinates":[[[106.4863,20.8002],[106.48747,20.79849],[106.48769,20.79758],[106.48967,20.7953],[106.4942,20.78868],[106.49697,20.78307],[106.4974,20.78181],[106.49844,20.77418],[106.49828,20.7728],[106.49793,20.7714],[106.4975,20.77082],[106.49655,20.77007],[106.49442,20.76755],[106.49365,20.76628],[106.49307,20.76481],[106.49283,20.76366],[106.49299,20.76271],[106.49357,20.76134],[106.49402,20.76083],[106.49451,20.76069],[106.49652,20.76106],[106.49841,20.76014],[106.50063,20.76197],[106.50262,20.76313],[106.50518,20.76417],[106.50749,20.76466],[106.5114,20.76428],[106.51927,20.76209],[106.53168,20.76218],[106.53532,20.76238],[106.53825,20.76202],[106.54,20.7616],[106.54827,20.75826],[106.54753,20.7592],[106.54728,20.76],[106.54728,20.76153],[106.54771,20.76333],[106.5483,20.76475],[106.55166,20.76962],[106.55179,20.77087],[106.55162,20.77142],[106.5509,20.77256],[106.54578,20.77645],[106.54339,20.77867],[106.54207,20.78013],[106.54115,20.78193],[106.54056,20.78358],[106.53874,20.79085],[106.53754,20.79423],[106.53687,20.7955],[106.5361,20.79651],[106.53512,20.79746],[106.53406,20.79817],[106.53292,20.79859],[106.53158,20.79871],[106.53053,20.79851],[106.52946,20.79791],[106.52819,20.79688],[106.52733,20.79582],[106.52594,20.79362],[106.52303,20.7899],[106.52182,20.78868],[106.52044,20.78782],[106.51911,20.78742],[106.51766,20.78744],[106.51624,20.7878],[106.51497,20.78841],[106.51383,20.78923],[106.51193,20.79117],[106.51091,20.79259],[106.50895,20.79628],[106.50852,20.79767],[106.50838,20.79927],[106.5088,20.80094],[106.50485,20.80361],[106.50415,20.80435],[106.5039,20.80495],[106.50353,20.80714],[106.50328,20.80775],[106.5027,20.80818],[106.50187,20.80843],[106.4991,20.80838],[106.49529,20.80756],[106.49392,20.80698],[106.49254,20.80629],[106.48952,20.80383],[106.4863,20.8002]]]},"city":{"type":"MultiPolygon","coordinates":[[[[106.1242,20.8329],[106.1253,20.829],[106.1302,20.8292],[106.1398,20.82],[106.1383,20.8101],[106.1311,20.8067],[106.142,20.7979],[106.1487,20.7846],[106.157,20.7799],[106.1656,20.785],[106.1717,20.7768],[106.1762,20.7765],[106.1742,20.7727],[106.181,20.7634],[106.1928,20.7658],[106.2035,20.7519],[106.2153,20.7503],[106.2185,20.7325],[106.2132,20.7326],[106.2124,20.7294],[106.2239,20.7177],[106.2278,20.705],[106.2434,20.6962],[106.2488,20.6863],[106.2579,20.6878],[106.2628,20.6839],[106.2695,20.6847],[106.2678,20.6879],[106.2562,20.6895],[106.2488,20.6955],[106.2628,20.7041],[106.2675,20.703],[106.2753,20.6928],[106.2886,20.6944],[106.2828,20.705],[106.2846,20.7115],[106.2941,20.707],[106.2932,20.6966],[106.3027,20.6896],[106.3355,20.7114],[106.3411,20.7108],[106.3502,20.7009],[106.3601,20.7018],[106.3722,20.71],[106.3829,20.7117],[106.4047,20.7287],[106.4168,20.7171],[106.4161,20.713],[106.4123,20.7124],[106.4139,20.7065],[106.4006,20.6884],[106.4209,20.6763],[106.4542,20.6403],[106.455,20.6334],[106.4501,20.6202],[106.466,20.6136],[106.4717,20.5981],[106.4819,20.5995],[106.4931,20.6166],[106.5151,20.6119],[106.5195,20.6025],[106.5298,20.603],[106.54,20.6084],[106.5417,20.6227],[106.5464,20.6268],[106.5593,20.6265],[106.569,20.6199],[106.5852,20.6272],[106.5928,20.6364],[106.6013,20.6398],[106.6131,20.6263],[106.6345,20.6274],[106.6434,20.6235],[106.6623,20.6032],[107.1193,20.2394],[107.3321,20.4461],[107.3761,20.4646],[107.115,20.718],[107.1129,20.7884],[107.1053,20.8144],[107.0893,20.8198],[107.0624,20.8363],[107.0432,20.8526],[107.0382,20.8623],[106.9966,20.8631],[106.9574,20.8802],[106.9451,20.8805],[106.8953,20.8197],[106.8771,20.8356],[106.8701,20.8319],[106.8608,20.8367],[106.8495,20.8279],[106.8496,20.8214],[106.8354,20.8141],[106.8261,20.8281],[106.7889,20.8342],[106.7662,20.8483],[106.7588,20.8596],[106.7531,20.8821],[106.7693,20.9108],[106.7697,20.9581],[106.7662,20.9791],[106.7536,20.9925],[106.7409,20.9978],[106.7083,20.9992],[106.6514,21.0194],[106.6455,21.0188],[106.6374,21.0121],[106.625,21.0119],[106.611,21.0203],[106.6039,21.0365],[106.5758,21.0574],[106.5685,21.0532],[106.5611,21.0562],[106.5539,21.0529],[106.5447,21.0545],[106.5327,21.0477],[106.5249,21.0506],[106.5234,21.0461],[106.5195,21.0483],[106.5157,21.0463],[106.5193,21.0538],[106.5163,21.0552],[106.5166,21.0603],[106.5039,21.0567],[106.4992,21.0574],[106.4871,21.0681],[106.4747,21.0693],[106.4585,21.065],[106.4548,21.0656],[106.4542,21.0698],[106.4476,21.0697],[106.4463,21.075],[106.4405,21.0797],[106.4508,21.0952],[106.4392,21.1067],[106.4423,21.111],[106.4414,21.1173],[106.4577,21.1196],[106.4615,21.1151],[106.4724,21.1188],[106.4729,21.1225],[106.4842,21.1299],[106.4837,21.1441],[106.4795,21.1455],[106.4827,21.1586],[106.4901,21.1668],[106.4866,21.1733],[106.4895,21.1807],[106.4961,21.1847],[106.4944,21.199],[106.5006,21.2015],[106.4982,21.2111],[106.5019,21.2244],[106.4925,21.228],[106.489,21.237],[106.4867,21.2289],[106.4743,21.2302],[106.4663,21.2261],[106.4553,21.2329],[106.4381,21.2284],[106.4237,21.2307],[106.4226,21.2236],[106.417,21.2226],[106.4128,21.2077],[106.4001,21.2021],[106.3934,21.203],[106.3856,21.1965],[106.3741,21.1954],[106.3695,21.1839],[106.371,21.1816],[106.3645,21.1792],[106.3668,21.1736],[106.353,21.1715],[106.3446,21.1734],[106.3476,21.1679],[106.3457,21.1652],[106.341,21.1726],[106.3324,21.1746],[106.3309,21.1813],[106.3231,21.1852],[106.3251,21.1925],[106.3119,21.1916],[106.3097,21.1799],[106.3213,21.1584],[106.3228,21.1485],[106.3139,21.1314],[106.2993,21.122],[106.2951,21.109],[106.3041,21.0719],[106.3107,21.0598],[106.2936,21.0384],[106.2946,21.0206],[106.2753,21.006],[106.2721,21.0002],[106.2728,20.9919],[106.2679,20.9885],[106.2462,20.9978],[106.2449,20.9908],[106.2337,20.9954],[106.2304,20.9927],[106.2209,20.9958],[106.2208,20.99],[106.1929,20.9792],[106.1875,20.9809],[106.1676,20.9693],[106.1633,20.9755],[106.1695,20.9848],[106.1679,20.9875],[106.1594,20.9902],[106.151,20.9888],[106.1379,21.0012],[106.132,20.9991],[106.1272,20.9835],[106.1382,20.975],[106.1336,20.9695],[106.135,20.9603],[106.1484,20.9583],[106.1499,20.9603],[106.1506,20.956],[106.1582,20.9509],[106.1503,20.9444],[106.1527,20.9341],[106.1483,20.9291],[106.1496,20.9245],[106.1548,20.9238],[106.1552,20.9172],[106.1449,20.9136],[106.1423,20.9073],[106.1362,20.9037],[106.1386,20.8938],[106.1473,20.8881],[106.142,20.8589],[106.1369,20.8503],[106.1262,20.8479],[106.1292,20.8455],[106.1294,20.8382],[106.1242,20.8329]]],[[[107.5044,20.1269],[107.5094,20.0837],[107.5238,20.0424],[107.5469,20.0048],[107.5777,19.9723],[107.615,19.9466],[107.6571,19.9286],[107.7023,19.9191],[107.7331,19.9178],[107.7639,19.9204],[107.8085,19.9317],[107.8498,19.9515],[107.8858,19.9788],[107.9062,20.0006],[107.9303,20.0377],[107.9457,20.0787],[107.9519,20.1217],[107.9506,20.1507],[107.9409,20.1932],[107.9221,20.2328],[107.895,20.268],[107.8607,20.2972],[107.8208,20.3191],[107.7769,20.3329],[107.7309,20.3379],[107.6849,20.334],[107.6406,20.3212],[107.6001,20.3002],[107.5651,20.2718],[107.5371,20.2373],[107.5172,20.1981],[107.5089,20.1702],[107.5044,20.1269]]]]},"country":{"type":"MultiPolygon","coordinates":[[[[102.1439,22.4005],[102.196,22.336],[102.1775,22.3048],[102.2341,22.2828],[102.241,22.2384],[102.4348,22.1167],[102.4414,22.0741],[102.5193,22.0302],[102.488,22.0067],[102.5062,21.9735],[102.6128,21.92],[102.6745,21.6549],[102.7491,21.6645],[102.8261,21.7354],[102.8105,21.8249],[102.8335,21.846],[102.8776,21.7024],[102.9741,21.745],[102.9919,21.5859],[102.8694,21.4287],[102.9422,21.4566],[102.8962,21.386],[102.8972,21.3047],[102.8077,21.2637],[102.9118,21.2297],[102.903,21.1658],[102.9494,21.1412],[102.9681,21.0707],[103.0343,21.0585],[103.1134,20.8972],[103.2114,20.901],[103.2373,20.8337],[103.2907,20.8376],[103.3902,20.7841],[103.4673,20.8261],[103.5096,20.7531],[103.6017,20.7426],[103.6833,20.6616],[103.7361,20.6681],[103.7334,20.7314],[103.791,20.7466],[103.7805,20.8016],[103.8137,20.8639],[103.8525,20.8589],[103.8998,20.903],[104.0319,20.9019],[104.1072,20.9766],[104.2426,20.933],[104.2576,20.8982],[104.2923,20.9227],[104.3293,20.8561],[104.4838,20.7663],[104.4983,20.711],[104.5573,20.7184],[104.6387,20.6705],[104.602,20.606],[104.5414,20.5985],[104.5234,20.5496],[104.3876,20.49],[104.3768,20.4431],[104.4156,20.4268],[104.4142,20.3811],[104.4745,20.369],[104.5277,20.4133],[104.6089,20.4219],[104.661,20.4749],[104.7197,20.4067],[104.6173,20.3611],[104.6141,20.2428],[104.8619,20.1416],[104.9271,20.1589],[104.9938,20.0948],[104.8441,19.9256],[104.8361,19.7952],[104.6631,19.7025],[104.6421,19.6219],[104.5268,19.6154],[104.4127,19.7049],[104.3205,19.6668],[104.3042,19.6971],[104.2367,19.7076],[104.1631,19.6966],[104.137,19.6617],[104.0684,19.6827],[104.0583,19.6201],[104.1197,19.5015],[104.063,19.4537],[104.0692,19.4166],[103.9764,19.3984],[103.8754,19.3065],[103.9996,19.2325],[104.0692,19.248],[104.1792,19.1977],[104.2228,19.1567],[104.218,19.1189],[104.2883,19.1183],[104.3989,19.0579],[104.4488,18.9857],[104.5295,18.9855],[104.5812,18.9009],[104.7399,18.8004],[104.859,18.7733],[104.9131,18.7907],[104.9408,18.7393],[105.1339,18.7167],[105.1982,18.6403],[105.1907,18.6052],[105.1348,18.5914],[105.1035,18.4474],[105.1846,18.3863],[105.1843,18.3248],[105.2996,18.2363],[105.3286,18.2646],[105.3199,18.2004],[105.3679,18.1609],[105.4911,18.2029],[105.5058,18.1245],[105.5711,18.084],[105.5812,18.014],[105.6435,17.9925],[105.6079,17.877],[105.6834,17.8334],[105.6757,17.7954],[105.7301,17.7446],[105.7507,17.6685],[105.8618,17.6273],[106.1459,17.3091],[106.2497,17.2438],[106.3038,17.2952],[106.3075,17.2392],[106.3342,17.234],[106.3043,17.208],[106.416,17.0787],[106.4021,17.0532],[106.4398,16.9949],[106.5153,16.9715],[106.5501,17.0074],[106.5475,16.9258],[106.5143,16.8959],[106.5513,16.8652],[106.5513,16.6943],[106.5857,16.6012],[106.6673,16.5841],[106.6471,16.5223],[106.676,16.4521],[106.7347,16.4391],[106.7403,16.4108],[106.7711,16.4678],[106.8022,16.4635],[106.8308,16.5488],[106.8628,16.541],[106.8904,16.5115],[106.8719,16.4284],[106.9649,16.3539],[106.972,16.3028],[107.0816,16.3124],[107.1249,16.2855],[107.157,16.2567],[107.1594,16.1679],[107.2627,16.1369],[107.3337,16.0549],[107.4531,16.0881],[107.4673,16.0247],[107.4154,15.912],[107.2213,15.8357],[107.2131,15.7388],[107.2495,15.7446],[107.2766,15.7078],[107.2777,15.6329],[107.3438,15.6139],[107.3822,15.4935],[107.469,15.4986],[107.5595,15.3944],[107.6239,15.4154],[107.5964,15.3828],[107.635,15.3194],[107.633,15.2302],[107.5827,15.1958],[107.6268,15.1497],[107.5979,15.0879],[107.6215,15.0509],[107.5839,15.0284],[107.5402,15.0495],[107.4678,15.007],[107.4832,14.9509],[107.5915,14.8736],[107.5054,14.7858],[107.5419,14.7507],[107.5234,14.7216],[107.5557,14.7213],[107.5596,14.6226],[107.517,14.5849],[107.5322,14.5463],[107.489,14.4072],[107.427,14.409],[107.4401,14.3821],[107.3908,14.3263],[107.408,14.2355],[107.3354,14.115],[107.3828,14.0786],[107.3579,14.0165],[107.4558,13.98],[107.473,13.8543],[107.4508,13.795],[107.5326,13.7443],[107.6176,13.5289],[107.6312,13.3604],[107.4842,12.948],[107.4987,12.8775],[107.5546,12.8172],[107.5823,12.6793],[107.59,12.559],[107.5439,12.3504],[107.4439,12.2926],[107.4166,12.239],[107.3451,12.3349],[107.1556,12.2788],[107.0002,12.0947],[106.92,12.0615],[106.7933,12.0829],[106.7209,11.9684],[106.4116,11.9747],[106.4675,11.8671],[106.4143,11.7676],[106.4512,11.6709],[106.3706,11.6966],[106.3023,11.6792],[106.2562,11.7256],[106.1113,11.7435],[106.0607,11.7829],[106.0168,11.769],[105.9531,11.6391],[105.8875,11.677],[105.8536,11.6629],[105.8084,11.6005],[105.8807,11.5458],[105.8744,11.4611],[105.9034,11.4468],[105.8718,11.4045],[105.8654,11.2869],[105.9091,11.2842],[105.9407,11.2067],[106.0143,11.1909],[106.0222,11.1431],[106.103,11.0722],[106.1541,11.1022],[106.1733,11.0762],[106.2057,10.976],[106.1465,10.9795],[106.14,10.9147],[106.1908,10.7902],[106.0709,10.8118],[105.9442,10.9167],[105.9356,10.8385],[105.8498,10.8627],[105.8634,10.8992],[105.7774,11.0322],[105.5372,10.9521],[105.4261,10.9728],[105.3381,10.8598],[105.1,10.9199],[105.1173,10.961],[105.0825,10.9568],[105.0285,10.8923],[105.0983,10.7217],[104.9538,10.6367],[104.8685,10.5217],[104.5976,10.533],[104.498,10.4045],[104.4392,10.4232],[104.071,10.1548],[104.1084,10.2412],[104.1051,10.3788],[104.0229,10.4698],[103.9732,10.4745],[103.9158,10.39],[103.8308,10.4043],[103.8051,10.3657],[103.8402,10.2843],[103.9245,10.2284],[103.9609,10.0745],[103.0522,9.4111],[103.3339,9.0855],[104.8324,8.1831],[106.6991,8.4431],[109.2386,9.8375],[109.284,9.9385],[109.6692,12.6219],[109.5539,13.9259],[109.3364,15.4724],[107.5032,17.296],[106.6585,18.2372],[106.195,18.8603],[106.1569,19.3015],[107.3321,20.4461],[107.5715,20.5494],[107.9737,20.8427],[108.1827,21.0592],[108.2086,21.2097],[108.1347,21.2756],[108.0931,21.4849],[108.0349,21.5471],[107.9548,21.5369],[107.8591,21.6544],[107.6762,21.6088],[107.577,21.6181],[107.5425,21.5894],[107.4827,21.5988],[107.4635,21.6635],[107.3628,21.5995],[107.3605,21.6636],[107.3011,21.7426],[107.2221,21.7078],[107.1117,21.7938],[107.0088,21.8279],[107.0636,21.8939],[107.0241,21.9449],[106.9612,21.9194],[106.9162,21.9757],[106.812,21.9732],[106.7652,22.0128],[106.6905,21.9643],[106.7131,22.0961],[106.6881,22.1383],[106.7059,22.1594],[106.6696,22.186],[106.702,22.2196],[106.6906,22.2777],[106.6597,22.3338],[106.5599,22.3484],[106.5865,22.3936],[106.5575,22.4588],[106.6111,22.6052],[106.6535,22.576],[106.7285,22.5941],[106.7222,22.6381],[106.7796,22.709],[106.7647,22.7416],[106.8181,22.7721],[106.8278,22.8136],[106.7654,22.8108],[106.7064,22.8889],[106.6534,22.8653],[106.6017,22.9291],[106.5257,22.9485],[106.497,22.904],[106.414,22.8749],[106.2857,22.8674],[106.2358,22.9543],[106.1448,22.996],[106.0019,22.9926],[105.9987,22.9417],[105.8757,22.9168],[105.8373,22.9879],[105.7112,23.0707],[105.5721,23.0723],[105.574,23.1604],[105.4988,23.2026],[105.4416,23.2995],[105.371,23.3189],[105.3237,23.3927],[105.2528,23.3379],[105.2345,23.2613],[105.1715,23.2892],[105.112,23.2461],[105.0798,23.2662],[104.9627,23.1987],[104.9476,23.151],[104.8961,23.1795],[104.8762,23.1254],[104.8018,23.1162],[104.8647,22.9473],[104.7751,22.9006],[104.7329,22.8233],[104.6234,22.8473],[104.6,22.8162],[104.5774,22.8535],[104.3708,22.6882],[104.2694,22.7415],[104.2588,22.8449],[104.1151,22.8114],[104.0386,22.7222],[104.0123,22.5233],[103.9773,22.5068],[103.8773,22.5652],[103.6593,22.7895],[103.619,22.786],[103.5749,22.7226],[103.5772,22.6574],[103.5302,22.5951],[103.4561,22.6592],[103.4264,22.7137],[103.4402,22.7535],[103.3273,22.8139],[103.2816,22.6813],[103.1849,22.6444],[103.1579,22.5947],[103.1824,22.5574],[103.0877,22.5098],[103.0806,22.451],[103.0314,22.4427],[102.9288,22.4844],[102.8617,22.6085],[102.6077,22.7319],[102.57,22.7034],[102.4924,22.7798],[102.4354,22.701],[102.3847,22.6852],[102.4191,22.6369],[102.2492,22.4624],[102.2625,22.4139],[102.1865,22.4343],[102.1439,22.4005]]],[[[107.5044,20.1269],[107.5777,19.9723],[107.7331,19.9178],[107.8858,19.9788],[107.9519,20.1217],[107.895,20.268],[107.7309,20.3379],[107.5651,20.2718],[107.5044,20.1269]]]]}};
+    var map=L.map(mapEl,{minZoom:5,maxZoom:17,zoomControl:true,scrollWheelZoom:false,attributionControl:true,
+      maxBounds:[[6,99],[25,113]],zoomSnap:0.25});
+    L.tileLayer('tiles/{z}/{x}/{y}.jpg',{minZoom:5,maxZoom:17,maxNativeZoom:17,
+      errorTileUrl:'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+      attribution:'Imagery © Esri, Maxar, Earthstar Geographics · Boundaries © OpenStreetMap contributors'}).addTo(map);
+    var lay={
+      country:L.geoJSON(B.country,{style:{color:'#ffffff',weight:2,fill:false}}).addTo(map),
+      city:L.geoJSON(B.city,{style:{color:'#ffb27a',weight:2,dashArray:'6 5',fillColor:'#ffb27a',fillOpacity:.06}}).addTo(map),
+      commune:L.geoJSON(B.commune,{style:{color:'#ff5515',weight:3,fillColor:'#ff5515',fillOpacity:.12}}).addTo(map)
+    };
+    lay.city.bindTooltip(mapEl.dataset.city||'Hai Phong City',{permanent:true,direction:'center',className:'lv-label'});
+    lay.commune.bindTooltip(mapEl.dataset.commune||'Quyet Thang Commune',{permanent:true,direction:'top',className:'lv-label',offset:[0,-10]});
+    var sites=[[20.776788,106.529609,mapEl.dataset.s1||'Tu Cuong Primary School',mapEl.dataset.s1d||'School renovation'],
+               [20.773588,106.531203,mapEl.dataset.s2||'Tu Cuong Preschool',mapEl.dataset.s2d||'Oral hygiene education · toy-making']];
+    sites.forEach(function(p){L.circleMarker([p[0],p[1]],{radius:8,color:'#ffffff',weight:2,fillColor:'#ff5515',fillOpacity:1}).addTo(map).bindPopup('<b>'+p[2]+'</b>'+p[3])});
+    var views={country:lay.country.getBounds(),city:[[20.45,106.15],[21.15,107.05]],commune:lay.commune.getBounds().pad(0.08)};
+    var lvb=[].slice.call(document.querySelectorAll('.levels button'));
+    var setLv=function(k,anim){lvb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lv===k)});
+      var o={padding:[20,20]};if(anim&&!RM){map.flyToBounds(views[k],Object.assign(o,{duration:1.4}))}else{map.fitBounds(views[k],o)}
+      if(lay.city.getTooltip()){k==='country'?lay.city.closeTooltip():lay.city.openTooltip()}};
+    lvb.forEach(function(b){b.addEventListener('click',function(){setLv(b.dataset.lv,true)})});
+    map.on('click focus',function(){map.scrollWheelZoom.enable()});
+    map.on('mouseout blur',function(){map.scrollWheelZoom.disable()});
+    setLv('commune',false);
+    window.addEventListener('resize',function(){map.invalidateSize()});
+  }
+
+  // media brief dialog
+  var BR={"https://baohaiphong.vn/dau-an-tuan-le-tinh-nguyen-hyundai-happy-move-tai-hai-phong-549518.html": ["Reports that the seven-day Happy Move volunteer week in Quyet Thang wrapped up on August 2.", "Highlights the library and playground upgrades and mural at the primary school, STEAM projects such as recycled boats, safety keyrings and recycled cars, and oral hygiene lessons at the preschool.", "Notes that Hyundai Motor Group gave 20 bicycles to students facing hardship, calling the week a bridge of Vietnam–Korea friendship."], "https://daibieunhandan.vn/hanh-trinh-happy-move-2026-tinh-nguyen-vien-quoc-te-dong-hanh-cung-tre-em-hai-phong-10425771.html": ["Describes the program as a first-hand experience of global citizenship for the Korean students, living alongside local residents.", "World Vision stresses that lasting change happens only when communities, local authorities, businesses and volunteers work together.", "Mr. Junheang Heo, Vice President and Head of Vietnam Business at Hyundai Motor Group, calls Vietnam “our home” and pledges continued support through education and community."], "https://thoidai.com.vn/sinh-vien-viet-nam-han-quoc-chung-tay-vi-tre-em-hai-phong-755573.html": ["Describes how renovating the primary school library, playground, football field and murals created friendly spaces for children.", "Covers wind-energy STEAM lessons and oral hygiene sessions, quoting volunteer Kim Yunsoo.", "Says Hyundai Motor Group and World Vision hope their partnership and Vietnam–Korea friendship will keep growing."], "https://www.vietnam.vn/en/hanh-trinh-happy-move-2026-tinh-nguyen-vien-quoc-te-dong-hanh-cung-tre-em-hai-phong": ["An English version of the Đại biểu Nhân dân article.", "Covers the volunteer activities and interviews with World Vision and Hyundai Motor Group representatives.", "Notes that more than 13,000 students worldwide have joined Happy Move since 2008."], "https://thhp.vn/ban-tin-thoi-su-cuoi-ngay-03-08-2026-55424.html": ["Hai Phong TV’s evening news covered the closing ceremony of the Happy Move volunteer week.", "The report starts at 7:14 in the video."], "https://thhp.vn/ban-tin-thoi-su-sang-04-08-2026-55425.html": ["Hai Phong TV’s morning news showed the volunteer sites in Quyet Thang and the opening ceremony.", "The report starts at 5:00 in the video."], "https://thhp.vn/ban-tin-thoi-su-17h00-07-08-2026-55594.html": ["Hai Phong TV’s 5 p.m. news aired a report on the 2026 Happy Move volunteer week.", "The report starts at 19:20 in the video."]}, BRUI={"close": "Close", "open": "Read the original ↗", "watch": "Watch the video ↗", "more": "Summary", "brief": "Article summary", "tvbrief": "Broadcast summary", "note": "Summaries are based on the original articles.", "tvp": "Hai Phong TV · ", "thp": "Hai Phong TV (THP)"};
+  var dlg=document.getElementById('brief');
+  if(dlg&&dlg.showModal){
+    var $=function(id){return document.getElementById(id)};
+    document.querySelectorAll('[data-brief]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        var d=BR[a.getAttribute('data-brief')];if(!d)return;e.preventDefault();
+        var img=a.querySelector('img');$('brief-img').src=img?img.getAttribute('src'):'';
+        var o=a.querySelector('.outlet,.ch');$('brief-outlet').textContent=o?(o.textContent==='THP'?BRUI.thp:o.textContent):'';
+        var tv=a.classList.contains('tvc');$('brief-kind').textContent=tv?BRUI.tvbrief:BRUI.brief;
+        var t=a.querySelector('b');$('brief-t').textContent=(tv?BRUI.tvp:'')+(t?t.textContent:'');
+        var or=a.querySelector('.orig');$('brief-orig').textContent=or?or.textContent:'';$('brief-orig').hidden=!or;
+        $('brief-list').innerHTML='';d.forEach(function(x){var li=document.createElement('li');li.textContent=x;$('brief-list').appendChild(li)});
+        var l=$('brief-link');l.href=a.href;l.textContent=tv?BRUI.watch:BRUI.open;
+        dlg.showModal();
+      });
+    });
+    $('brief-close').addEventListener('click',function(){dlg.close()});
+    dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+  }
+})();
+</script>
