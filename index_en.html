@@ -584,6 +584,14 @@ section,article{scroll-margin-top:72px}
 .br-act button{font:inherit;font-weight:700;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);padding:9px 16px;border-radius:99px;cursor:pointer}
 .pc .go{color:var(--accent-ink)}
 
+
+/* natural line breaks */
+body{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
+h1,h2,h3,h4,.h2,.kr,.theme-line,.theme-banner b,.theme-banner span,.stage h3,.act-head h3,.dtext h3,.quote p,.voice p,.letter-q,.kpi .k,.kpi .d,.effects b,.big span,.st-fig span,.pc b,.br-body h3,.vc-tx b,.lv-t b,.tm figcaption b,.ts-cap b,.steam-banner b,.sc b{text-wrap:balance}
+p,li,td,figcaption,.lead,.note,.effects div,.chips div,.dtext li span,.orig,.br-body li,.letter-body p,.lessons li,.stage li,.goals span,.kpi .d,.voice cite,.ts-cap span{text-wrap:pretty}
+.hero .sub br,.theme-line br,.act-body p br{display:inline}
+@media (max-width:760px){.hero .sub br,.theme-line br,.act-body p br,.stage h3 br{display:none}}
+
 /* lessons */
 .lessons{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-top:36px}
 @media (max-width:900px){.lessons{grid-template-columns:1fr}}
