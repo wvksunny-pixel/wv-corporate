@@ -748,7 +748,8 @@ footer{padding-bottom:120px}
   .print-only{display:block !important}
   section{padding-block:36px !important;break-inside:auto}
   #map,#theme,#summary,#schedule,#activities,#voices,#media,#next{break-before:page}
-  .act{break-before:page;padding-block:24px !important}
+  .act{break-before:auto;padding-block:28px !important;border-top:1px solid var(--line)}
+  .act-head{break-after:avoid}
   .act:first-of-type{break-before:avoid}
   h2,h3,h4,.eyebrow{break-after:avoid}
   .kpi,.goals li,.effects div,.chips div,.voice,.pc,.tvc,.dcard,.learned,.quote,.spaces figure,.gal figure,.stage,.lessons > div,.letter,.bachdang,table,tr,.sc,figure{break-inside:avoid}
@@ -794,6 +795,14 @@ footer{padding-bottom:120px}
   .letter{grid-template-columns:260px 1fr !important}
   .gal{grid-template-columns:repeat(5,1fr) !important}
   .bachdang{grid-template-columns:1fr 1.1fr !important}
+}
+
+@media print{
+  #people{break-before:page}
+  .gal{grid-template-columns:repeat(7,1fr) !important;gap:6px !important}
+  .gal figcaption{font-size:10.5px}
+  .act-body{gap:18px !important}
+  .effects div{padding:14px !important}
 }
 </style>
 
@@ -1542,7 +1551,8 @@ footer{padding-bottom:120px}
   .print-only{display:block !important}
   section{padding-block:36px !important;break-inside:auto}
   #map,#theme,#summary,#schedule,#activities,#voices,#media,#next{break-before:page}
-  .act{break-before:page;padding-block:24px !important}
+  .act{break-before:auto;padding-block:28px !important;border-top:1px solid var(--line)}
+  .act-head{break-after:avoid}
   .act:first-of-type{break-before:avoid}
   h2,h3,h4,.eyebrow{break-after:avoid}
   .kpi,.goals li,.effects div,.chips div,.voice,.pc,.tvc,.dcard,.learned,.quote,.spaces figure,.gal figure,.stage,.lessons > div,.letter,.bachdang,table,tr,.sc,figure{break-inside:avoid}
