@@ -628,6 +628,84 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 footer b{color:#fff}
 
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* ===== design polish (refined look) ===== */
+.days{align-items:flex-start}
+:root{
+  --ink:#152131; --muted:#5d6573; --subtle:#3b4351;
+  --bg:#fbfaf8; --bg-alt:#f4f1ec; --line:#e8e3db; --line-strong:#cfc8bd;
+  --night:#13202f; --accent-soft:#fdf1ea;
+  --shadow-sm:0 1px 2px rgba(21,33,49,.05),0 6px 18px rgba(21,33,49,.05);
+  --shadow-md:0 2px 4px rgba(21,33,49,.06),0 16px 36px rgba(21,33,49,.08);
+  --radius:14px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eeedf2;--muted:#a9a7b3;--subtle:#c9c7d1;--bg:#13141a;--bg-alt:#1a1b23;--line:#2b2c36;--line-strong:#6a6878;--night:#22324a;--accent-soft:#2c1c15;--shadow-sm:none;--shadow-md:none}}
+:root[data-theme="dark"]{--ink:#eeedf2;--muted:#a9a7b3;--subtle:#c9c7d1;--bg:#13141a;--bg-alt:#1a1b23;--line:#2b2c36;--line-strong:#6a6878;--night:#22324a;--accent-soft:#2c1c15;--shadow-sm:none;--shadow-md:none}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;letter-spacing:-.005em}
+section{padding-block:112px}
+.wrap{max-width:1160px}
+/* section headings */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:currentColor;opacity:.7}
+.h2{font-size:clamp(28px,3.4vw,42px);font-weight:800;letter-spacing:-.025em;line-height:1.25;margin-top:14px}
+.lead{font-size:16.5px;line-height:1.75;color:var(--muted)}
+h3,h4,.act-head h3,.dtext h3,.stage h3{letter-spacing:-.02em}
+/* hero */
+.hero h1{font-size:clamp(44px,6.2vw,88px);font-stretch:105%;letter-spacing:-.02em;line-height:.95}
+.hero h1 span{white-space:nowrap}
+.hero h1 .rpt{font-size:15px;font-weight:700;letter-spacing:.08em;border-width:1px;border-color:#ffffff59;padding:6px 14px;border-radius:99px;margin-top:22px;background:#ffffff14;backdrop-filter:blur(4px)}
+.hero .kr{font-size:clamp(22px,2.4vw,30px);font-weight:800;letter-spacing:-.02em;margin-top:30px}
+.hero .sub{font-size:15.5px;color:#cfd7e0;line-height:1.9}
+.hero .meta{border-top:1px solid #ffffff26;gap:10px 28px;font-size:13.5px;letter-spacing:.01em}
+.hero .meta b{font-weight:700}
+.hero-bg::after{background:linear-gradient(90deg,#0d1824f5 0%,#0d1824e0 40%,#0d182499 70%,#0d182466 100%),linear-gradient(0deg,#0d1824 0%,#0d182400 40%)}
+/* nav */
+.nav{background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom-color:color-mix(in srgb,var(--line) 70%,transparent)}
+.nav ul{gap:20px;font-size:13.5px}
+/* cards: one consistent surface */
+.goals li,.effects div,.chips div,.voice,.pc,.dcard,.kpi,.sc,.levels button,.daynav a{border-radius:var(--radius);border-color:var(--line);box-shadow:var(--shadow-sm)}
+.pc,.voice,.dcard{transition:transform .25s ease,box-shadow .25s ease}
+.pc:hover,.voice:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+/* KPI tiles */
+.kpis{gap:14px;background:none;border:0;border-radius:0;overflow:visible}
+.kpi{border:1px solid var(--line);background:var(--bg);padding:26px 24px 24px;position:relative}
+.kpi::before{content:"";position:absolute;left:24px;top:0;width:28px;height:3px;border-radius:0 0 3px 3px;background:var(--accent)}
+.kpi .v{color:var(--ink);font-weight:800;letter-spacing:-.03em}
+.kpi .v small{color:var(--accent-ink);font-weight:800;font-size:16px;margin-left:3px}
+.kpi .k{font-size:15px}
+.kpi.wide{background:var(--night);border-color:var(--night)}
+.kpi.wide::before{display:none}
+.kpi.wide blockquote{color:#f2f4f7;font-weight:600;font-size:18px;line-height:1.7}
+.kpi.wide cite{color:#aebacb}
+/* stage overview */
+.theme-banner{border-radius:18px;padding:34px 32px;background:radial-gradient(120% 140% at 0% 0%,#22344b 0%,#13202f 60%)}
+.st-no{font-weight:800;letter-spacing:-.03em}
+/* activities */
+.act{gap:56px;padding-block:72px}
+.act-head .big b{color:var(--ink);letter-spacing:-.03em}
+.act-head .big b small{color:var(--accent-ink)}
+.stage-tag{background:transparent;color:var(--ink);border:1px solid var(--line-strong);font-weight:600}
+.act-body p.theme-line{border-left:0;padding-left:0;font-size:22px !important;font-weight:700;line-height:1.6 !important;letter-spacing:-.02em;position:relative;padding-top:18px}
+.act-body p.theme-line::before{content:"";position:absolute;left:0;top:0;width:36px;height:3px;border-radius:3px;background:var(--accent)}
+.learned{border-radius:18px;padding:28px 30px;background:radial-gradient(120% 160% at 100% 0%,#22344b 0%,#13202f 65%)}
+.effects div{background:var(--bg);padding:20px}
+.effects b{font-size:15.5px;margin-bottom:8px}
+.gal img,.dph img,.tm-ph,.vc-img,.ba,.pc .th,.bachdang img,.tvc,.letter img{border-radius:12px}
+.gal figure{overflow:hidden}
+.gal img{transition:transform .5s ease}
+.gal figure:hover img{transform:scale(1.03)}
+.quote{border-radius:16px;background:var(--accent-soft);padding:26px 28px}
+.quote p{font-weight:600}
+/* map legend fix (the old .m card style leaked in) */
+.map-legend .lg-line.m{padding:0;border:0;border-top:3px solid #ff5515;background:none;border-radius:0;box-shadow:none;display:inline-block;width:18px;height:0;transform:none}
+.map-legend{border-radius:10px;padding:8px 12px;backdrop-filter:blur(6px)}
+.mapwrap{border-radius:16px;box-shadow:var(--shadow-md)}
+/* tables */
+table.t thead th{background:transparent;border-bottom:1.5px solid var(--ink);color:var(--ink);letter-spacing:.02em}
+.tbl-wrap{border-radius:var(--radius)}
+/* footer */
+footer{padding-block:56px}
+@media (prefers-reduced-motion:reduce){.pc,.voice,.dcard,.gal img{transition:none}}
 </style>
 
 </head>
@@ -782,13 +860,13 @@ footer b{color:#fff}
       <div class="kpi"><div class="v num">68</div><div class="k">Volunteers</div><div class="d">58 Korean and 10 Vietnamese university students</div></div>
       <div class="kpi"><div class="v num">100<small>%</small></div><div class="k">Planned activities completed</div><div class="d">All planned deliverables completed</div></div>
       <div class="kpi"><div class="v num">1,672</div><div class="k">Direct beneficiaries</div><div class="d">947 direct participants</div></div>
-      <div class="kpi"><div class="v num">1,260<small>hrs</small></div><div class="k">Hours of direct labor</div><div class="d">School renovation only · teaching not included</div></div>
+      <div class="kpi"><div class="v num">1,260<small>hrs</small></div><div class="k">Renovation work</div><div class="d">Hours spent improving the school</div></div>
       <div class="kpi"><div class="v num">178</div><div class="k">STEAM students</div><div class="d">3 sessions for secondary students</div></div>
       <div class="kpi"><div class="v num">275</div><div class="k">Hygiene kits</div><div class="d">Individual kits for preschool children</div></div>
       <div class="kpi"><div class="v num">300<small>sets</small></div><div class="k">Educational sets</div><div class="d">Handmade soaps and handwashing guides, co-made with all preschool teachers</div></div>
       <div class="kpi"><div class="v num">20<small>bikes</small></div><div class="k">Bicycle support</div><div class="d">For 20 students selected by the People’s Committee</div></div>
       <div class="kpi"><div class="v num">8</div><div class="k">Media reports</div><div class="d">4 Vietnamese outlets · 3 Hai Phong TV · 1 LinkedIn</div></div>
-      <div class="kpi"><div class="v num">5<small>+</small>3</div><div class="k">Cultural performances</div><div class="d">5 by volunteers · 3 by local youth and children</div></div>
+      <div class="kpi"><div class="v num">8</div><div class="k">Cultural performances</div><div class="d">5 by volunteers · 3 by local youth and children</div></div>
       <div class="kpi wide">
         <blockquote>“The Korean students have shown us their passion and youth energy, their desire to contribute, and their deep sense of responsibility to the community.”</blockquote>
         <cite>Ms. Ha Dam Thanh Van, Vice Chairperson of Quyet Thang People’s Committee</cite>
@@ -872,7 +950,7 @@ footer b{color:#fff}
         <span class="act-no">ACTIVITY 01</span>
         <h3>Spaces that changed children’s days</h3>
         <span class="where">Outdoor library · play area · football playground · murals · schoolyard</span>
-        <div class="big"><div><b class="num">1,260<small>hrs</small></b><span>of direct labor on renovation</span></div><div><b class="num">5<small>sites</small></b><span>Outdoor library · play area · football playground · murals · schoolyard</span></div></div>
+        <div class="big"><div><b class="num">1,260<small>hrs</small></b><span>of renovation work</span></div><div><b class="num">5<small>sites</small></b><span>Outdoor library · play area · football playground · murals · schoolyard</span></div></div>
       </div>
       <div class="act-body">
         <p class="theme-line">A waterlogged, unused area<br>was reborn as a place where children read, play and spend time together.</p>
