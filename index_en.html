@@ -593,6 +593,18 @@ p,li,td,figcaption,.lead,.note,.effects div,.chips div,.dtext li span,.orig,.br-
 .hero .sub br,.theme-line br,.act-body p br{display:inline}
 @media (max-width:760px){.hero .sub br,.theme-line br,.act-body p br,.stage h3 br{display:none}}
 
+
+/* scroll position */
+.scroll-bar{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:0;background:var(--accent);z-index:30;transition:width .1s linear}
+.nav ul a{position:relative;padding:6px 2px}
+.nav ul a.on{color:var(--accent-ink);font-weight:700}
+.nav ul a.on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--accent)}
+.ts-pause{display:none}
+.bachdang{display:grid;grid-template-columns:1fr 1.1fr;gap:20px;align-items:center;background:var(--bg-alt);border-radius:10px;padding:18px}
+.bachdang img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block}
+.bachdang p{font-size:15px !important;line-height:1.75 !important}
+@media (max-width:700px){.bachdang{grid-template-columns:1fr}}
+
 /* lessons */
 .lessons{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-top:36px}
 @media (max-width:900px){.lessons{grid-template-columns:1fr}}
@@ -639,7 +651,7 @@ footer b{color:#fff}
       <p class="sub">The Hyundai Motor Group Happy Move Global Youth Volunteers<br>spent their days learning alongside the children of Quyet Thang, Hai Phong, Vietnam,<br>building a better school and healthier everyday lives.</p>
       <p class="sub">From school renovation to STEAM education, hygiene education and cultural exchange.<br>Small moves by young people grew into children’s learning and dreams,<br>and together, people from two countries discovered new possibilities.</p>
       <div class="meta">
-        <div><b>July 26 – August 3, 2026</b></div>
+        <div><b>9 days · July 26 – August 3, 2026</b></div>
         <div>Vietnam · Quyet Thang, Hai Phong</div>
       </div>
     </div>
@@ -664,13 +676,13 @@ footer b{color:#fff}
         <tr><th>Location</th><td>Quyet Thang Commune, Hai Phong City, Vietnam</td></tr>
         <tr><th>Sites</th><td>Tu Cuong Preschool · Primary School · Secondary School</td></tr>
         <tr><th>Partners</th><td>Hyundai Motor Group · World Vision Korea (WVK) · World Vision International in Vietnam (WVIV) · Quyet Thang People’s Committee</td></tr>
-        <tr><th>Volunteers</th><td>58 Korean university students · 10 volunteers from Vietnam National University (VNU)</td></tr>
-        <tr><th>Period</th><td>July 26 – August 3, 2026</td></tr>
+        <tr><th>Volunteers</th><td>68 in total (58 Korean and 10 Vietnamese university students)</td></tr>
+        <tr><th>Period</th><td>9 days (July 26 – August 3, 2026)</td></tr>
       </table>
       <div>
         <h3 style="font-size:16px;margin-bottom:14px">Program objectives</h3>
         <ol class="goals">
-          <li><div><b>Child-friendly learning environment</b><span>Green library, football playground and mural at Tu Cuong Primary School</span></div></li>
+          <li><div><b>Child-friendly learning environment</b><span>Outdoor library, football playground, play area and murals at Tu Cuong Primary School</span></div></li>
           <li><div><b>STEAM experiential learning</b><span>For students of Tu Cuong Secondary School</span></div></li>
           <li><div><b>Oral hygiene education and toy-making</b><span>For children of Tu Cuong Preschool</span></div></li>
           <li><div><b>Cultural exchange</b><span>Korean volunteers · Vietnamese university volunteers · Quyet Thang community</span></div></li>
@@ -685,21 +697,21 @@ footer b{color:#fff}
   <div class="wrap">
     <div class="eyebrow">Where we worked</div>
     <h2 class="h2">Project Location</h2>
-    <p class="lead">Quyet Thang Commune, Hai Phong City, in northern Vietnam. Choose a level to zoom from the country down to the project site.</p>
+    <p class="lead">Quyet Thang Commune, Hai Phong City, northern Vietnam<br>Choose a level to zoom from the country down to the project site.</p>
     <div class="mapbox">
       <ol class="levels" role="group" aria-label="Map level">
         <li><button type="button" data-lv="country" aria-pressed="false"><span class="lv-no">01</span><span class="lv-t"><i>Country</i><b>Vietnam</b><small>Việt Nam</small></span></button></li>
-        <li><button type="button" data-lv="city" aria-pressed="false"><span class="lv-no">02</span><span class="lv-t"><i>Province-level city</i><b>Hai Phong City</b><small>Thành phố Hải Phòng</small></span></button></li>
+        <li><button type="button" data-lv="city" aria-pressed="false"><span class="lv-no">02</span><span class="lv-t"><i>City</i><b>Hai Phong City</b><small>Thành phố Hải Phòng</small></span></button></li>
         <li><button type="button" data-lv="commune" aria-pressed="true"><span class="lv-no">03</span><span class="lv-t"><i>Commune</i><b>Quyet Thang Commune</b><small>Xã Quyết Thắng · project site</small></span></button></li>
       </ol>
       <div class="mapwrap">
         <div id="leafmap" role="region" aria-label="Satellite map of the project area"></div>
         <div class="map-legend">
-          <span><i class="lg-line c"></i>Country</span><span><i class="lg-line p"></i>Province</span><span><i class="lg-line m"></i>Commune</span><span><i class="lg-dot"></i>Project schools</span>
+          <span><i class="lg-line c"></i>Country</span><span><i class="lg-line p"></i>Hai Phong</span><span><i class="lg-line m"></i>Quyet Thang</span><span><i class="lg-dot"></i>Project schools</span>
         </div>
       </div>
     </div>
-    <p class="note">※ Since the 2025 administrative reform, Vietnam has two levels of local government: provinces/centrally-run cities and communes/wards. Imagery © Esri, Maxar, Earthstar Geographics · Boundaries © OpenStreetMap contributors</p>
+    <p class="note">※ Quyet Thang is a commune, the basic administrative unit, within Hai Phong City. Imagery © Esri, Maxar, Earthstar Geographics · Boundaries © OpenStreetMap contributors</p>
   </div>
 </section>
 
@@ -726,10 +738,10 @@ footer b{color:#fff}
         <div class="st-top"><span class="st-no">02</span><div><b>Action</b></div></div>
         <h3>Creating spaces<br>for children</h3>
         <ul>
-          <li><a href="#a1">Green library · reading hut</a></li>
+          <li><a href="#a1">Outdoor library · reading pavilion</a></li>
           <li><a href="#a1">Football playground · educational mural</a></li>
         </ul>
-        <div class="st-fig"><b class="num">1,260</b><span>volunteer hours</span></div>
+        <div class="st-fig"><b class="num">1,260</b><span>renovation hours</span></div>
       </li>
       <li class="stage">
         <div class="st-top"><span class="st-no">03</span><div><b>Share</b></div></div>
@@ -759,10 +771,10 @@ footer b{color:#fff}
     <h2 class="h2">Results at a Glance</h2>
     <p class="lead">The change the 2026 Happy Move Vietnam team made together</p>
     <div class="kpis">
-      <div class="kpi"><div class="v num">68</div><div class="k">Volunteers</div><div class="d">58 Korean university students · 10 VNU volunteers</div></div>
+      <div class="kpi"><div class="v num">68</div><div class="k">Volunteers</div><div class="d">58 Korean and 10 Vietnamese university students</div></div>
       <div class="kpi"><div class="v num">100<small>%</small></div><div class="k">Planned activities completed</div><div class="d">All planned deliverables completed</div></div>
       <div class="kpi"><div class="v num">1,672</div><div class="k">Direct beneficiaries</div><div class="d">947 direct participants</div></div>
-      <div class="kpi"><div class="v num">1,260<small>hrs</small></div><div class="k">Hours of direct labor</div><div class="d">School renovation at Tu Cuong Primary School</div></div>
+      <div class="kpi"><div class="v num">1,260<small>hrs</small></div><div class="k">Hours of direct labor</div><div class="d">School renovation only · teaching not included</div></div>
       <div class="kpi"><div class="v num">178</div><div class="k">STEAM students</div><div class="d">3 sessions for secondary students</div></div>
       <div class="kpi"><div class="v num">275</div><div class="k">Hygiene kits</div><div class="d">Individual kits for preschool children</div></div>
       <div class="kpi"><div class="v num">300<small>sets</small></div><div class="k">Educational sets</div><div class="d">Handmade soaps and handwashing guides, co-made with all preschool teachers</div></div>
@@ -826,7 +838,7 @@ footer b{color:#fff}
       </article>
       <article class="dcard" id="day08">
         <div class="dmeta"><span class="dno">DAY 08</span><span class="ddate">Aug 2<small>Sun</small></span></div>
-        <div class="dtext"><h3>Becoming one team through cultural exchange</h3><ul><li><span class="kind k-c">Cultural exchange</span><span>At the closing ceremony, five teams took the stage with taekwondo, Vietnamese traditional dance, choir, a placard performance and fan dance.</span></li><li><span class="kind k-c">Cultural exchange</span><span>A visit to Bach Dang Giang, a landmark historic site of Hai Phong, offered another view of Vietnam.</span></li><li><span class="kind k-p">Prep & team</span><span>At the farewell party, awards, an activity video, handwritten messages and shared reflections closed the week.</span></li></ul></div>
+        <div class="dtext"><h3>Becoming one team through cultural exchange</h3><ul><li><span class="kind k-c">Cultural exchange</span><span>At the closing ceremony, five teams took the stage with taekwondo, a K-POP and Vietnamese music dance, choir, a placard performance and fan dance.</span></li><li><span class="kind k-c">Cultural exchange</span><span>A visit to Bạch Đằng Giang, a landmark historic site of Hai Phong, offered another view of Vietnam.</span></li><li><span class="kind k-p">Prep & team</span><span>At the farewell party, awards, an activity video, handwritten messages and shared reflections closed the week.</span></li></ul></div>
         <div class="dph"><figure><img src="img/blog_d8_6.jpg" alt="Placard performance" loading="lazy"><figcaption>Cultural performances</figcaption></figure><figure><img src="img/blog_d8_8.jpg" alt="Fan dance" loading="lazy"><figcaption>Fan dance</figcaption></figure></div>
       </article>
       <article class="dcard" id="day09">
@@ -851,13 +863,13 @@ footer b{color:#fff}
         <span class="stage-tag">Renovation · Better spaces</span>
         <span class="act-no">ACTIVITY 01</span>
         <h3>Spaces that changed children’s days</h3>
-        <span class="where">Green library · mural · football playground · play area</span>
-        <div class="big"><div><b class="num">1,260<small>hrs</small></b><span>of direct volunteer labor</span></div><div><b class="num">3<small>sites</small></b><span>Green library · football playground · mural</span></div></div>
+        <span class="where">Outdoor library · play area · football playground · murals · schoolyard</span>
+        <div class="big"><div><b class="num">1,260<small>hrs</small></b><span>of direct labor on renovation</span></div><div><b class="num">5<small>sites</small></b><span>Outdoor library · play area · football playground · murals · schoolyard</span></div></div>
       </div>
       <div class="act-body">
         <p class="theme-line">A waterlogged, unused area<br>was reborn as a place where children read, play and spend time together.</p>
         <div><div class="ba-tabs" role="group" aria-label="Choose a site">
-            <button type="button" aria-pressed="true" data-pair="0">Green library</button>
+            <button type="button" aria-pressed="true" data-pair="0">Outdoor library</button>
             <button type="button" aria-pressed="false" data-pair="1">Mural</button>
             <button type="button" aria-pressed="false" data-pair="2">Schoolyard</button>
           </div>
@@ -871,10 +883,10 @@ footer b{color:#fff}
               <button type="button" id="ba-btn-a" aria-pressed="false">AFTER</button>
             </div>
           </div>
-          <p class="ba-cap" id="ba-cap">Waterlogged, unused area → the new green library</p></div>
+          <p class="ba-cap" id="ba-cap">Waterlogged, unused area → the new outdoor library</p></div>
         <div>
           <h4>What we built together</h4>
-          <p>We built an outdoor green library and set up a reading hut.<br>We renovated the football playground and play area, and added bright, meaningful murals around the school.</p>
+          <p>We built an outdoor library and decorated a reading pavilion.<br>We renovated the football playground and play area, and added bright, meaningful murals around the school.</p>
         </div>
         <div>
           <h4>What changes for children</h4>
@@ -890,11 +902,11 @@ footer b{color:#fff}
             <figure><img src="img/fig12.jpg" alt="" loading="lazy"><figcaption>Painting the mural</figcaption></figure>
             <figure><img src="img/fig13.jpg" alt="" loading="lazy"><figcaption>Building the drainage channel</figcaption></figure>
             <figure><img src="img/fig14.jpg" alt="" loading="lazy"><figcaption>Making the library gates</figcaption></figure>
-            <figure><img src="img/fig15.jpg" alt="" loading="lazy"><figcaption>Decorating the reading hut</figcaption></figure>
+            <figure><img src="img/fig15.jpg" alt="" loading="lazy"><figcaption>Decorating the reading pavilion</figcaption></figure>
             <figure><img src="img/fig16.jpg" alt="" loading="lazy"><figcaption>Tiling the library floor</figcaption></figure>
             <figure><img src="img/fig17.jpg" alt="" loading="lazy"><figcaption>Carrying concrete</figcaption></figure>
             <figure><img src="img/fig18.jpg" alt="" loading="lazy"><figcaption>Volunteers in front of their finished work</figcaption></figure>
-            <figure><img src="img/fig19.jpg" alt="" loading="lazy"><figcaption>Painting the library fence</figcaption></figure>
+            <figure><img src="img/fig19.jpg" alt="" loading="lazy"><figcaption>Painting the library fence</figcaption></figure><figure><img src="img/blog_d7_5.jpg" alt="" loading="lazy"><figcaption>Painting the schoolyard floor</figcaption></figure>
             <figure><img src="img/fig20.jpg" alt="" loading="lazy"><figcaption>Children on the swings</figcaption></figure>
           </div></div>
       </div>
@@ -938,7 +950,7 @@ footer b{color:#fff}
           </div></div>
         <div>
           <h4>What we built together</h4>
-          <p>Korean and Vietnamese volunteers designed lesson plans and prepared materials together, running three hands-on sessions with 178 secondary students.<br>Students worked in teams to build, test and present their STEAM products.</p>
+          <p>Korean and Vietnamese volunteers designed lesson plans and prepared materials together,<br>running three hands-on sessions with 178 secondary students.<br>Students worked in teams to build, test and present their STEAM products.</p>
         </div>
         <div>
           <h4>What changed for children</h4>
@@ -1063,7 +1075,7 @@ footer b{color:#fff}
         <span class="stage-tag">Cultural exchange · Performances</span>
         <span class="act-no">ACTIVITY 06</span>
         <h3>Together on one stage</h3>
-        <span class="where">Cultural performances · Bach Dang Giang visit</span>
+        <span class="where">Cultural performances · Bạch Đằng Giang visit</span>
         <div class="big"><div><b class="num">8</b><span>performances (5 by volunteers · 3 local)</span></div></div>
       </div>
       <div class="act-body">
@@ -1077,7 +1089,7 @@ footer b{color:#fff}
             </div><div class="tslide" data-i="1">
               <img src="img/blog_d8_2.jpg" alt="Team 2 performance" loading="lazy">
               <img src="img/blog_d8_3.jpg" alt="Team 2 group photo" loading="lazy">
-              <div class="ts-cap"><span class="tm-no">Team 2</span><b>Vietnamese traditional dance & K-POP</b><span>Dances from both countries joined in one performance</span></div>
+              <div class="ts-cap"><span class="tm-no">Team 2</span><b>K-POP & Vietnamese music dance</b><span>A two-country music stage with Vietnamese student volunteers</span></div>
             </div><div class="tslide" data-i="2">
               <img src="img/blog_d8_4.jpg" alt="Team 3 performance" loading="lazy">
               <img src="img/blog_d8_5.jpg" alt="Team 3 group photo" loading="lazy">
@@ -1094,6 +1106,7 @@ footer b{color:#fff}
             </div>
             <div class="ts-tabs" role="group" aria-label="Choose a team"><button type="button" data-i="0" aria-pressed="true">Team 1</button><button type="button" data-i="1" aria-pressed="false">Team 2</button><button type="button" data-i="2" aria-pressed="false">Team 3</button><button type="button" data-i="3" aria-pressed="false">Team 4</button><button type="button" data-i="4" aria-pressed="false">Team 5</button><button type="button" class="ts-pause" id="tspause" aria-pressed="false" data-pause="Pause" data-play="Play">Pause</button><span class="ts-bar"><i id="tsbar"></i></span></div>
           </div></div>
+        <div><h4>Bạch Đằng Giang visit</h4><div class="bachdang"><img src="img/blog_d8_10.jpg" alt="Volunteers at the Bach Dang historic site" loading="lazy"><p>Bạch Đằng Giang is one of Hai Phong’s most significant historical and cultural sites, commemorating the battles in which Vietnam repelled foreign invaders.<br>On the last day, the volunteers explored the site to learn about the city’s history, heritage and identity.</p></div></div>
         <div>
           <h4>What we built together</h4>
           <p>Five performances by Happy Move volunteers and three by local youth and children created a lively platform for Vietnamese–Korean cultural exchange.<br>A visit to Bach Dang Giang, one of Hai Phong’s most significant historical and cultural sites, taught the volunteers about the city’s history and heritage.</p>
@@ -1168,6 +1181,7 @@ footer b{color:#fff}
             <tr><td><b>Total</b></td><td class="r"><b>947</b></td><td class="r"><b>1,672</b></td></tr>
           </tbody>
         </table></div>
+        <p class="note">· Direct participants: people who took part in the activities, such as lessons, events and performances<br>· Direct beneficiaries: people who directly receive support, such as improved facilities, education, hygiene kits and bicycles</p>
         <p class="note">* The 198 secondary-student beneficiaries comprise 178 STEAM participants and 20 bicycle recipients.</p>
       </div>
     </div>
@@ -1215,7 +1229,7 @@ footer b{color:#fff}
       </a>
       <a class="tvc sns" href="https://www.linkedin.com/company/wvivietnam/" target="_blank" rel="noopener">
         <span class="play" aria-hidden="true">↗</span><span class="ch">in</span>
-        <b>World Vision Vietnam</b><span>Official LinkedIn page</span><span class="ts">See #HappyMove2026 updates</span>
+        <b>World Vision Vietnam</b><span>World Vision Vietnam LinkedIn</span><span class="ts">Visit the page</span>
       </a>
     </div>
   </div>
@@ -1269,7 +1283,7 @@ footer b{color:#fff}
   var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   // before/after pairs (report figures 3–10)
   var pairs=[
-    ["img/fig03c.jpg","img/fig04.jpg","Waterlogged, unused area → the new green library"],
+    ["img/fig03c.jpg","img/fig04.jpg","Waterlogged, unused area → the new outdoor library"],
     ["img/fig05c.jpg","img/fig06.jpg","Degraded wall → the wall with a new mural"],
     ["img/fig09.jpg","img/fig10.jpg","Yard before painting → an educational game painted on the ground"]
   ];
@@ -1403,5 +1417,19 @@ footer b{color:#fff}
     $('brief-close').addEventListener('click',function(){dlg.close()});
     dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
   }
+
+  // scroll position: progress bar + active menu item
+  (function(){
+    var bar=document.createElement('div');bar.className='scroll-bar';bar.setAttribute('aria-hidden','true');document.body.appendChild(bar);
+    var links=[].slice.call(document.querySelectorAll('.nav ul a[href^="#"]'));
+    var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))});
+    var tick=false;
+    var upd=function(){tick=false;var h=document.documentElement,max=h.scrollHeight-innerHeight;bar.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';
+      var y=scrollY+innerHeight*0.35,cur=-1;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
+      links.forEach(function(a,i){var on=i===cur;a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+      var act=links[cur];if(act&&act.scrollIntoView&&act.parentNode.parentNode.scrollWidth>act.parentNode.parentNode.clientWidth){var ul=act.parentNode.parentNode;ul.scrollLeft=act.offsetLeft-ul.clientWidth/2}};
+    window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+    window.addEventListener('resize',upd);upd();
+  })();
 })();
 </script>

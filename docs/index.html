@@ -607,6 +607,18 @@ p,li,td,figcaption,.lead,.note,.effects div,.chips div,.dtext li span,.orig,.br-
 .hero .sub br,.theme-line br,.act-body p br{display:inline}
 @media (max-width:760px){.hero .sub br,.theme-line br,.act-body p br,.stage h3 br{display:none}}
 
+
+/* scroll position */
+.scroll-bar{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:0;background:var(--accent);z-index:30;transition:width .1s linear}
+.nav ul a{position:relative;padding:6px 2px}
+.nav ul a.on{color:var(--accent-ink);font-weight:700}
+.nav ul a.on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--accent)}
+.ts-pause{display:none}
+.bachdang{display:grid;grid-template-columns:1fr 1.1fr;gap:20px;align-items:center;background:var(--bg-alt);border-radius:10px;padding:18px}
+.bachdang img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block}
+.bachdang p{font-size:15px !important;line-height:1.75 !important}
+@media (max-width:700px){.bachdang{grid-template-columns:1fr}}
+
 /* lessons */
 .lessons{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-top:36px}
 @media (max-width:900px){.lessons{grid-template-columns:1fr}}
@@ -655,7 +667,7 @@ footer b{color:#fff}
       <p class="sub">현대자동차그룹 해피무브 글로벌 청년봉사단은<br>베트남 하이퐁시 꾸엣탕 지역의 아이들과 함께 배우고,<br>더 나은 학교와 더 건강한 일상을 만들어가는 시간을 보냈습니다.</p>
       <p class="sub">환경개선부터 STEAM 교육, 위생교육, 문화교류까지.<br>청년들의 작은 움직임이 아이들의 배움과 꿈으로 이어지고,<br>서로 다른 우리가 함께하며 새로운 가능성을 발견했습니다.</p>
       <div class="meta">
-        <div><b>7. 26 – 8. 3, 2026</b></div>
+        <div><b>8박 9일 · 2026. 7. 26 – 8. 3</b></div>
         <div>Vietnam · Quyet Thang, Hai Phong</div>
       </div>
     </div>
@@ -679,14 +691,14 @@ footer b{color:#fff}
         <tr><th>사업명</th><td>2026 현대자동차그룹 해피무브 봉사단 베트남 파견</td></tr>
         <tr><th>지역</th><td>베트남 하이퐁시 꾸엣탕(Quyet Thang) 지역</td></tr>
         <tr><th>대상 기관</th><td>뚜끄엉(Tu Cuong) 유치원 · 초등학교 · 중학교</td></tr>
-        <tr><th>협력</th><td>현대자동차그룹 · 한국월드비전(WVK) · 월드비전 베트남(WVIV) · 꾸엣탕 인민위원회</td></tr>
-        <tr><th>참여</th><td>한국 대학생 58명 · 베트남국립대(VNU) 봉사자 10명</td></tr>
-        <tr><th>기간</th><td>2026. 7. 26 ~ 8. 3</td></tr>
+        <tr><th>협력</th><td>현대자동차그룹 · 한국월드비전(WVK) · 베트남월드비전(WVIV) · 꾸엣탕 인민위원회</td></tr>
+        <tr><th>참여</th><td>총 68명 (한국 대학생 58명 · 베트남 대학생 10명)</td></tr>
+        <tr><th>기간</th><td>8박 9일 (2026. 7. 26 – 8. 3)</td></tr>
       </table>
       <div>
         <h3 style="font-size:16px;margin-bottom:14px">사업 목적</h3>
         <ol class="goals">
-          <li><div><b>아동친화적 학습환경 조성</b><span>뚜끄엉 초등학교 그린 라이브러리, 축구장, 벽화</span></div></li>
+          <li><div><b>아동친화적 학습환경 조성</b><span>뚜끄엉 초등학교 야외 도서관, 축구장, 놀이공간, 벽화</span></div></li>
           <li><div><b>STEAM 체험교육</b><span>뚜끄엉 중학교 학생 대상</span></div></li>
           <li><div><b>구강위생교육과 교구 제작</b><span>뚜끄엉 유치원 아동 대상</span></div></li>
           <li><div><b>문화교류</b><span>한국 봉사단 · 베트남 대학생 봉사단 · 꾸엣탕 지역사회</span></div></li>
@@ -701,21 +713,21 @@ footer b{color:#fff}
   <div class="wrap">
     <div class="eyebrow">Where we worked</div>
     <h2 class="h2">활동 지역</h2>
-    <p class="lead">베트남 북부 하이퐁시 꾸엣탕 사(社). 단계를 누르면 국가에서 봉사 현장까지 차례로 확대됩니다.</p>
+    <p class="lead">베트남 북부 하이퐁시 꾸엣탕 지역<br>단계를 누르면 국가에서 봉사 현장까지 차례로 확대됩니다.</p>
     <div class="mapbox">
       <ol class="levels" role="group" aria-label="지도 단계">
         <li><button type="button" data-lv="country" aria-pressed="false"><span class="lv-no">01</span><span class="lv-t"><i>국가 · Country</i><b>베트남</b><small>Việt Nam</small></span></button></li>
-        <li><button type="button" data-lv="city" aria-pressed="false"><span class="lv-no">02</span><span class="lv-t"><i>성급 시 · Province</i><b>하이퐁시</b><small>Thành phố Hải Phòng</small></span></button></li>
-        <li><button type="button" data-lv="commune" aria-pressed="true"><span class="lv-no">03</span><span class="lv-t"><i>사(社) · Commune</i><b>꾸엣탕 사</b><small>Xã Quyết Thắng · 봉사 현장</small></span></button></li>
+        <li><button type="button" data-lv="city" aria-pressed="false"><span class="lv-no">02</span><span class="lv-t"><i>시 · City</i><b>하이퐁시</b><small>Thành phố Hải Phòng</small></span></button></li>
+        <li><button type="button" data-lv="commune" aria-pressed="true"><span class="lv-no">03</span><span class="lv-t"><i>봉사 지역 · Commune</i><b>꾸엣탕</b><small>Xã Quyết Thắng · 봉사 현장</small></span></button></li>
       </ol>
       <div class="mapwrap">
         <div id="leafmap" role="region" aria-label="활동 지역 위성 지도"></div>
         <div class="map-legend">
-          <span><i class="lg-line c"></i>국가</span><span><i class="lg-line p"></i>성급 시</span><span><i class="lg-line m"></i>사(社)</span><span><i class="lg-dot"></i>봉사 학교</span>
+          <span><i class="lg-line c"></i>국가</span><span><i class="lg-line p"></i>하이퐁시</span><span><i class="lg-line m"></i>꾸엣탕</span><span><i class="lg-dot"></i>봉사 학교</span>
         </div>
       </div>
     </div>
-    <p class="note">※ 베트남은 2025년 행정개편으로 성(省)·시와 사(社)·방(坊)의 2단계 지방행정 체계를 운영합니다. 위성 이미지 © Esri, Maxar, Earthstar Geographics · 행정경계 © OpenStreetMap contributors</p>
+    <p class="note">※ 꾸엣탕(Quyet Thang)은 하이퐁시에 속한 기초 행정구역(코뮌)입니다. 위성 이미지 © Esri, Maxar, Earthstar Geographics · 행정경계 © OpenStreetMap contributors</p>
   </div>
 </section>
 
@@ -742,10 +754,10 @@ footer b{color:#fff}
         <div class="st-top"><span class="st-no">02</span><div><b>참여</b><i>Action</i></div></div>
         <h3>아이들을 위한<br>공간과 환경 조성</h3>
         <ul>
-          <li><a href="#a1">그린 라이브러리 · 독서 오두막</a></li>
+          <li><a href="#a1">야외 도서관 · 독서 정자</a></li>
           <li><a href="#a1">축구장 개선 · 교육용 벽화</a></li>
         </ul>
-        <div class="st-fig"><b class="num">1,260</b><span>시간 봉사</span></div>
+        <div class="st-fig"><b class="num">1,260</b><span>시간 노력봉사</span></div>
       </li>
       <li class="stage">
         <div class="st-top"><span class="st-no">03</span><div><b>나눔</b><i>Share</i></div></div>
@@ -775,10 +787,10 @@ footer b{color:#fff}
     <h2 class="h2">한눈에 보는 성과</h2>
     <p class="lead">2026 해피무브 베트남 봉사단이 함께 만든 변화</p>
     <div class="kpis">
-      <div class="kpi"><div class="v num">68<small>명</small></div><div class="k">봉사단</div><div class="d">한국 대학생 58명 · 베트남국립대 봉사자 10명</div></div>
+      <div class="kpi"><div class="v num">68<small>명</small></div><div class="k">봉사단</div><div class="d">한국 대학생 58명 · 베트남 대학생 10명</div></div>
       <div class="kpi"><div class="v num">100<small>%</small></div><div class="k">계획 활동 완료율</div><div class="d">계획한 모든 활동 완료</div></div>
       <div class="kpi"><div class="v num">1,672<small>명</small></div><div class="k">직접 수혜자</div><div class="d">직접 참여자 947명</div></div>
-      <div class="kpi"><div class="v num">1,260<small>시간</small></div><div class="k">순수 봉사시간</div><div class="d">뚜끄엉 초등학교 환경개선</div></div>
+      <div class="kpi"><div class="v num">1,260<small>시간</small></div><div class="k">순수 봉사시간</div><div class="d">노력봉사(학교 환경개선) 기준 · 교육봉사 제외</div></div>
       <div class="kpi"><div class="v num">178<small>명</small></div><div class="k">STEAM 교육</div><div class="d">중학생 대상 3회</div></div>
       <div class="kpi"><div class="v num">275<small>명</small></div><div class="k">위생키트 전달</div><div class="d">유치원 아동 개인 위생키트</div></div>
       <div class="kpi"><div class="v num">300<small>세트</small></div><div class="k">교육용 세트 제작</div><div class="d">수제비누·손 씻기 시각자료, 유치원 교사 전원과 공동 제작</div></div>
@@ -842,7 +854,7 @@ footer b{color:#fff}
       </article>
       <article class="dcard" id="day08">
         <div class="dmeta"><span class="dno">DAY 08</span><span class="ddate">8. 2<small>일</small></span></div>
-        <div class="dtext"><h3>문화교류로 하나 된 우리</h3><ul><li><span class="kind k-c">문화교류</span><span>폐회식과 문화교류 공연. 태권도, 베트남 전통춤, 합창, 퍼포먼스, 부채춤까지 5개 팀이 무대에 올랐습니다.</span></li><li><span class="kind k-c">문화교류</span><span>하이퐁의 대표 역사 유적지인 박당강을 찾아 베트남을 또 다른 시선으로 만났습니다.</span></li><li><span class="kind k-p">준비·팀활동</span><span>페어웰 프로그램에서 시상, 활동 영상, 롤링페이퍼, 소감 나눔으로 한 주를 돌아봤습니다.</span></li></ul></div>
+        <div class="dtext"><h3>문화교류로 하나 된 우리</h3><ul><li><span class="kind k-c">문화교류</span><span>폐회식과 문화교류 공연. 태권도, K-POP·베트남 음악 댄스, 합창, 플래카드 퍼포먼스, 부채춤까지 5개 팀이 무대에 올랐습니다.</span></li><li><span class="kind k-c">문화교류</span><span>하이퐁의 대표 역사 유적지인 박당강(Bạch Đằng Giang)을 찾아 베트남을 또 다른 시선으로 만났습니다.</span></li><li><span class="kind k-p">준비·팀활동</span><span>페어웰 프로그램에서 시상, 활동 영상, 롤링페이퍼, 소감 나눔으로 한 주를 돌아봤습니다.</span></li></ul></div>
         <div class="dph"><figure><img src="img/blog_d8_6.jpg" alt="플래카드 퍼포먼스 공연" loading="lazy"><figcaption>문화교류 공연</figcaption></figure><figure><img src="img/blog_d8_8.jpg" alt="부채춤 공연" loading="lazy"><figcaption>부채춤 공연</figcaption></figure></div>
       </article>
       <article class="dcard" id="day09">
@@ -867,13 +879,13 @@ footer b{color:#fff}
         <span class="stage-tag">노력봉사 · 공간개선</span>
         <span class="act-no">ACTIVITY 01</span>
         <h3>아이들의 일상이 달라진 공간</h3>
-        <span class="where">그린 라이브러리 · 벽화 · 축구장 · 놀이공간</span>
-        <div class="big"><div><b class="num">1,260<small>시간</small></b><span>봉사단이 직접 흘린 땀</span></div><div><b class="num">3<small>곳</small></b><span>그린 라이브러리 · 축구장 · 벽화</span></div></div>
+        <span class="where">야외 도서관 · 놀이공간 · 축구장 · 벽화 · 운동장 바닥</span>
+        <div class="big"><div><b class="num">1,260<small>시간</small></b><span>노력봉사 순수 봉사시간</span></div><div><b class="num">5<small>곳</small></b><span>야외 도서관 · 놀이공간 · 축구장 · 벽화 · 운동장 바닥</span></div></div>
       </div>
       <div class="act-body">
         <p class="theme-line">물이 고여 활용하기 어려웠던 공간이<br>아이들이 책을 읽고, 뛰어놀고, 함께 어울릴 수 있는 공간으로 다시 태어났습니다.</p>
         <div><div class="ba-tabs" role="group" aria-label="비교할 장소">
-            <button type="button" aria-pressed="true" data-pair="0">그린 라이브러리</button>
+            <button type="button" aria-pressed="true" data-pair="0">야외 도서관</button>
             <button type="button" aria-pressed="false" data-pair="1">벽화</button>
             <button type="button" aria-pressed="false" data-pair="2">운동장 바닥</button>
           </div>
@@ -887,10 +899,10 @@ footer b{color:#fff}
               <button type="button" id="ba-btn-a" aria-pressed="false">AFTER</button>
             </div>
           </div>
-          <p class="ba-cap" id="ba-cap">물이 고여 쓰지 못하던 공간 → 새로 만든 그린 라이브러리</p></div>
+          <p class="ba-cap" id="ba-cap">물이 고여 쓰지 못하던 공간 → 새로 만든 야외 도서관</p></div>
         <div>
           <h4>함께 만든 변화</h4>
-          <p>야외 그린 라이브러리를 조성하고 독서 오두막을 설치했습니다.<br>축구장과 놀이공간을 정비하고, 학교 곳곳에 밝고 의미 있는 벽화를 더했습니다.</p>
+          <p>야외 도서관을 조성하고 독서 정자를 꾸몄습니다.<br>축구장과 놀이공간을 정비하고, 학교 곳곳에 밝고 의미 있는 벽화를 더했습니다.</p>
         </div>
         <div>
           <h4>아이들이 누릴 변화</h4>
@@ -906,11 +918,11 @@ footer b{color:#fff}
             <figure><img src="img/fig12.jpg" alt="" loading="lazy"><figcaption>벽화 작업</figcaption></figure>
             <figure><img src="img/fig13.jpg" alt="" loading="lazy"><figcaption>배수로 조성</figcaption></figure>
             <figure><img src="img/fig14.jpg" alt="" loading="lazy"><figcaption>도서관 출입문 제작</figcaption></figure>
-            <figure><img src="img/fig15.jpg" alt="" loading="lazy"><figcaption>독서 오두막 꾸미기</figcaption></figure>
+            <figure><img src="img/fig15.jpg" alt="" loading="lazy"><figcaption>독서 정자 꾸미기</figcaption></figure>
             <figure><img src="img/fig16.jpg" alt="" loading="lazy"><figcaption>도서관 바닥 타일 시공</figcaption></figure>
             <figure><img src="img/fig17.jpg" alt="" loading="lazy"><figcaption>콘크리트 운반</figcaption></figure>
             <figure><img src="img/fig18.jpg" alt="" loading="lazy"><figcaption>완성한 작품 앞 봉사단원</figcaption></figure>
-            <figure><img src="img/fig19.jpg" alt="" loading="lazy"><figcaption>도서관 울타리 페인팅</figcaption></figure>
+            <figure><img src="img/fig19.jpg" alt="" loading="lazy"><figcaption>도서관 울타리 페인팅</figcaption></figure><figure><img src="img/blog_d7_5.jpg" alt="" loading="lazy"><figcaption>운동장 바닥 그림 그리기</figcaption></figure>
             <figure><img src="img/fig20.jpg" alt="" loading="lazy"><figcaption>그네를 타는 아동</figcaption></figure>
           </div></div>
       </div>
@@ -954,7 +966,7 @@ footer b{color:#fff}
           </div></div>
         <div>
           <h4>함께 만든 변화</h4>
-          <p>한국과 베트남 봉사자가 함께 수업안을 설계하고 교재를 준비해, 중학생 178명과 세 차례 체험교육을 진행했습니다.<br>학생들은 팀을 이뤄 작품을 만들고, 직접 시험해 보고, 결과물을 발표했습니다.</p>
+          <p>한국과 베트남 봉사단원이 함께 수업안을 설계하고 교재를 준비해<br>중학생 178명과 세 차례 체험교육을 진행했습니다.<br>학생들은 팀을 이뤄 작품을 만들고, 직접 시험해 보고, 결과물을 발표했습니다.</p>
         </div>
         <div>
           <h4>아이들에게 생긴 변화</h4>
@@ -1079,7 +1091,7 @@ footer b{color:#fff}
         <span class="stage-tag">문화교류 · 공연</span>
         <span class="act-no">ACTIVITY 06</span>
         <h3>무대 위에서 하나가 된 시간</h3>
-        <span class="where">문화교류 공연 · 박당강 문화탐방</span>
+        <span class="where">문화교류 공연 · 박당강(Bạch Đằng Giang) 문화탐방</span>
         <div class="big"><div><b class="num">8<small>개</small></b><span>공연 (봉사단 5 · 현지 3)</span></div></div>
       </div>
       <div class="act-body">
@@ -1093,7 +1105,7 @@ footer b{color:#fff}
             </div><div class="tslide" data-i="1">
               <img src="img/blog_d8_2.jpg" alt="2팀 공연" loading="lazy">
               <img src="img/blog_d8_3.jpg" alt="2팀 단체사진" loading="lazy">
-              <div class="ts-cap"><span class="tm-no">2팀</span><b>베트남 전통춤 & K-POP</b><span>두 나라의 춤을 한 무대에 이어 붙인 문화교류 공연</span></div>
+              <div class="ts-cap"><span class="tm-no">2팀</span><b>K-POP & 베트남 음악 댄스</b><span>베트남 대학생 단원과 함께 꾸민 두 나라의 음악 무대</span></div>
             </div><div class="tslide" data-i="2">
               <img src="img/blog_d8_4.jpg" alt="3팀 공연" loading="lazy">
               <img src="img/blog_d8_5.jpg" alt="3팀 단체사진" loading="lazy">
@@ -1110,9 +1122,10 @@ footer b{color:#fff}
             </div>
             <div class="ts-tabs" role="group" aria-label="팀 선택"><button type="button" data-i="0" aria-pressed="true">1팀</button><button type="button" data-i="1" aria-pressed="false">2팀</button><button type="button" data-i="2" aria-pressed="false">3팀</button><button type="button" data-i="3" aria-pressed="false">4팀</button><button type="button" data-i="4" aria-pressed="false">5팀</button><button type="button" class="ts-pause" id="tspause" aria-pressed="false" data-pause="일시정지" data-play="재생">일시정지</button><span class="ts-bar"><i id="tsbar"></i></span></div>
           </div></div>
+        <div><h4>박당강(Bạch Đằng Giang) 문화탐방</h4><div class="bachdang"><img src="img/blog_d8_10.jpg" alt="박당강 유적지에서 찍은 봉사단 단체사진" loading="lazy"><p>박당강은 베트남이 외세를 물리친 박당강 전투를 기념하는 하이퐁의 대표 역사·문화 유적지입니다.<br>봉사단은 마지막 날 이곳을 둘러보며 하이퐁과 베트남의 역사와 정체성을 더 깊이 이해했습니다.</p></div></div>
         <div>
           <h4>함께 만든 변화</h4>
-          <p>해피무브 봉사단의 공연 5개와 현지 청소년·아이들의 공연 3개가 어우러진 문화교류의 장을 열었습니다.<br>하이퐁의 대표 역사·문화 유적지인 박당강을 찾아 지역의 역사와 문화를 배웠습니다.</p>
+          <p>해피무브 봉사단의 공연 5개와 현지 청소년·아이들의 공연 3개가 어우러진 문화교류의 장을 열었습니다.<br>하이퐁의 대표 역사·문화 유적지인 박당강(Bạch Đằng Giang)을 찾아 지역의 역사와 문화를 배웠습니다.</p>
         </div>
         <div>
           <h4>함께 나눈 변화</h4>
@@ -1136,7 +1149,7 @@ footer b{color:#fff}
     <div class="eyebrow">Voices</div>
     <h2 class="h2">현장의 목소리</h2>
     <div class="voices">
-      <div class="voice"><span class="who">지역정부</span><p>“월드비전 베트남, 한국월드비전, 현대자동차그룹이 잘 협력해 매우 의미 있는 프로그램을 만들었습니다. 한국 학생들은 열정과 젊은 에너지, 기여하고자 하는 마음, 지역사회에 대한 깊은 책임감을 보여주었습니다.”</p><cite>하 담 타인 반(Ha Dam Thanh Van) · 꾸엣탕 인민위원회 부위원장</cite></div>
+      <div class="voice"><span class="who">지역정부</span><p>“베트남월드비전, 한국월드비전, 현대자동차그룹이 잘 협력해 매우 의미 있는 프로그램을 만들었습니다. 한국 학생들은 열정과 젊은 에너지, 기여하고자 하는 마음, 지역사회에 대한 깊은 책임감을 보여주었습니다.”</p><cite>하 담 타인 반(Ha Dam Thanh Van) · 꾸엣탕 인민위원회 부위원장</cite></div>
       <div class="voice"><span class="who">한국 봉사단원</span><p>“아이들의 미소와 열정이 정말 인상 깊었습니다. 이번 활동이 아이들에게 도움이 되고, 우리 모두에게 아름다운 추억으로 남기를 바랍니다.”</p><cite>김윤수 · 2팀</cite></div>
       <div class="voice"><span class="who">베트남 대학생 봉사단</span><p>“며칠간의 열정적인 활동을 마치고 수료증을 손에 쥐었을 때 벅찬 감동을 느꼈습니다. 이 큰 국제 프로젝트에 함께할 현지 서포터즈 10명 중 한 명으로 선정되어 영광스럽고, 자랑스럽고, 감사했습니다.”</p><cite>비 타이 뚜언(Vi Thai Tuan) · 4팀</cite></div>
     </div>
@@ -1145,7 +1158,7 @@ footer b{color:#fff}
       <div class="letter-tx">
         <div class="eyebrow">Letter of thanks</div>
         <h3 style="font-size:22px;font-weight:900;margin-top:6px">꾸엣탕 인민위원회 감사 서한</h3>
-        <p class="lead">2026년 8월 4일 · 한국월드비전, 월드비전 베트남, 현대자동차그룹 앞</p>
+        <p class="lead">2026년 8월 4일 · 한국월드비전, 베트남월드비전, 현대자동차그룹 앞</p>
         <blockquote class="letter-q">“우리는 아동에 대한 투자가 곧 미래에 대한 투자라고 믿습니다. 오늘의 선한 행동 하나하나가 모든 아이가 배우고 성장하며 꿈을 좇을 기회를 누리는 따뜻한 공동체를 가꾸는 데 보탬이 됩니다.”</blockquote>
         <p class="letter-sign">꾸엣탕 인민위원회 위원장 당 반 코이(Dang Van Khoi)</p>
         <details class="letter-more">
@@ -1153,9 +1166,9 @@ footer b{color:#fff}
           <div class="letter-body">
             <p>하이퐁시 꾸엣탕 인민위원회를 대표하여, 귀 기관과 후원사, 모든 직원과 전문가, 그리고 베트남과 한국의 봉사자 여러분께 건강과 행복을 기원하며, 우리 지역에 보내주신 따뜻한 마음과 소중한 협력에 진심으로 감사드립니다.</p>
             <p>2026 ‘해피무브’ 봉사 프로그램은 막을 내렸지만, 프로그램이 전한 인간적인 가치는 지역사회 곳곳으로 계속 퍼져 나갈 것입니다. 완성된 시설과 의미 있는 체험 활동, 무엇보다 아이들의 밝은 미소는 나눔과 책임, 그리고 더 나은 미래를 함께 만들고자 하는 공동의 열망이 지닌 힘을 생생하게 보여줍니다.</p>
-            <p>꾸엣탕은 아동을 돌보고 지역사회를 발전시키는 이 여정에 함께해 준 한국월드비전, 월드비전 베트남, 현대자동차그룹에 깊이 감사드립니다. 국제기구와 기업 파트너, 지방정부 간의 긴밀한 연대는 오늘의 실질적인 성과를 넘어, 인간적이고 지속가능하며 깊은 의미를 지닌 실천으로 베트남과 대한민국의 우정을 키우고 있습니다.</p>
+            <p>꾸엣탕은 아동을 돌보고 지역사회를 발전시키는 이 여정에 함께해 준 한국월드비전, 베트남월드비전, 현대자동차그룹에 깊이 감사드립니다. 국제기구와 기업 파트너, 지방정부 간의 긴밀한 연대는 오늘의 실질적인 성과를 넘어, 인간적이고 지속가능하며 깊은 의미를 지닌 실천으로 베트남과 대한민국의 우정을 키우고 있습니다.</p>
             <p>꾸엣탕에 이번 프로그램은 눈에 보이는 가치뿐 아니라, 연대와 사회적 책임, 그리고 협력의 힘에 대한 믿음이라는 영감을 남겼습니다. 우리는 아동에 대한 투자가 곧 미래에 대한 투자라고 믿습니다. 오늘의 선한 행동 하나하나가 모든 아이가 배우고 성장하며 꿈을 좇을 기회를 누리는 따뜻한 공동체를 가꾸는 데 보탬이 됩니다.</p>
-            <p>열린 마음과 신뢰의 협력 정신으로, 꾸엣탕 인민위원회는 앞으로도 한국월드비전, 월드비전 베트남, 현대자동차그룹 및 한국 파트너들과 함께 아동과 지역사회, 지속가능발전목표를 위한 더 많은 실질적인 프로그램을 이어가기를 희망합니다. 지방정부는 책임 있는 파트너로서, 귀 기관 및 기업과 함께하는 향후 협력 사업이 효과적으로 추진될 수 있도록 모든 여건을 마련할 것을 약속드립니다.</p>
+            <p>열린 마음과 신뢰의 협력 정신으로, 꾸엣탕 인민위원회는 앞으로도 한국월드비전, 베트남월드비전, 현대자동차그룹 및 한국 파트너들과 함께 아동과 지역사회, 지속가능발전목표를 위한 더 많은 실질적인 프로그램을 이어가기를 희망합니다. 지방정부는 책임 있는 파트너로서, 귀 기관 및 기업과 함께하는 향후 협력 사업이 효과적으로 추진될 수 있도록 모든 여건을 마련할 것을 약속드립니다.</p>
             <p>꾸엣탕의 아이들과 주민들에게 의미 있는 시설과 활동뿐 아니라 믿음과 사랑, 관심을 전해 주신 귀 기관과 후원사, 모든 봉사자 여러분께 깊은 감사를 드립니다. 우리 지역의 가까운 친구로서 다시 찾아와, 아이들의 행복과 베트남·한국 공동체의 밝은 미래를 위한 협력과 사회적 책임, 지속가능한 발전의 아름다운 이야기를 계속 함께 써 내려가 주시기를 바랍니다.</p>
             <p class="letter-sign">인민위원회를 대표하여<br>위원장 당 반 코이(Dang Van Khoi) (서명·직인)</p>
           </div>
@@ -1184,6 +1197,7 @@ footer b{color:#fff}
             <tr><td><b>합계</b></td><td class="r"><b>947</b></td><td class="r"><b>1,672</b></td></tr>
           </tbody>
         </table></div>
+        <p class="note">· 직접 참여자: 교육·행사·공연 등 봉사 활동에 직접 참여한 인원<br>· 직접 수혜자: 개선된 시설, 교육, 위생키트·자전거 등의 지원을 직접 받는 인원</p>
         <p class="note">* 중학생 직접 수혜자 198명은 STEAM 체험교육 참여 학생 178명과 자전거 지원 학생 20명을 합산한 수치임</p>
       </div>
     </div>
@@ -1231,7 +1245,7 @@ footer b{color:#fff}
       </a>
       <a class="tvc sns" href="https://www.linkedin.com/company/wvivietnam/" target="_blank" rel="noopener">
         <span class="play" aria-hidden="true">↗</span><span class="ch">in</span>
-        <b>World Vision Vietnam</b><span>LinkedIn 공식 페이지</span><span class="ts">#HappyMove2026 소식 보기</span>
+        <b>World Vision Vietnam</b><span>베트남월드비전 LinkedIn</span><span class="ts">공식 페이지 보기</span>
       </a>
     </div>
   </div>
@@ -1272,7 +1286,7 @@ footer b{color:#fff}
     <div class="br-act"><a id="brief-link" href="#" target="_blank" rel="noopener"></a><button type="button" id="brief-close">닫기</button></div>
   </div>
 </dialog>
-<a class="fab-pdf" href="report.pdf" download aria-label="결과보고서 PDF 받기"><span class="fab-ic" aria-hidden="true">↓</span><span class="fab-tx">PDF 다운로드</span></a>
+<a class="fab-pdf" href="2026_HappyMove_WorldVision_Final_Report.pdf" download="2026_HappyMove_WorldVision_Final_Report.pdf" aria-label="결과보고서 PDF 받기"><span class="fab-ic" aria-hidden="true">↓</span><span class="fab-tx">PDF 다운로드</span></a>
 <footer>
   <div class="wrap">
     <div><b>2026 현대자동차그룹 해피무브 봉사단 · 베트남</b></div>
@@ -1286,7 +1300,7 @@ footer b{color:#fff}
   var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   // before/after pairs (활동보고서 Figure 3–10)
   var pairs=[
-    ["img/fig03c.jpg","img/fig04.jpg","물이 고여 쓰지 못하던 공간 → 새로 만든 그린 라이브러리"],
+    ["img/fig03c.jpg","img/fig04.jpg","물이 고여 쓰지 못하던 공간 → 새로 만든 야외 도서관"],
     ["img/fig05c.jpg","img/fig06.jpg","노후한 벽면 → 벽화로 새로 꾸민 벽면"],
     ["img/fig09.jpg","img/fig10.jpg","칠하기 전 운동장 → 바닥에 그린 교육용 놀이 그림"]
   ];
@@ -1383,7 +1397,7 @@ footer b{color:#fff}
       commune:L.geoJSON(B.commune,{style:{color:'#ff5515',weight:3,fillColor:'#ff5515',fillOpacity:.12}}).addTo(map)
     };
     lay.city.bindTooltip(mapEl.dataset.city||'하이퐁시',{permanent:true,direction:'center',className:'lv-label'});
-    lay.commune.bindTooltip(mapEl.dataset.commune||'꾸엣탕 사',{permanent:true,direction:'top',className:'lv-label',offset:[0,-10]});
+    lay.commune.bindTooltip(mapEl.dataset.commune||'꾸엣탕',{permanent:true,direction:'top',className:'lv-label',offset:[0,-10]});
     var sites=[[20.776788,106.529609,mapEl.dataset.s1||'뚜끄엉 초등학교',mapEl.dataset.s1d||'노력봉사 · 공간개선'],
                [20.773588,106.531203,mapEl.dataset.s2||'뚜끄엉 유치원',mapEl.dataset.s2d||'구강위생교육 · 교구 제작']];
     sites.forEach(function(p){L.circleMarker([p[0],p[1]],{radius:8,color:'#ffffff',weight:2,fillColor:'#ff5515',fillOpacity:1}).addTo(map).bindPopup('<b>'+p[2]+'</b>'+p[3])});
@@ -1420,6 +1434,20 @@ footer b{color:#fff}
     $('brief-close').addEventListener('click',function(){dlg.close()});
     dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
   }
+
+  // scroll position: progress bar + active menu item
+  (function(){
+    var bar=document.createElement('div');bar.className='scroll-bar';bar.setAttribute('aria-hidden','true');document.body.appendChild(bar);
+    var links=[].slice.call(document.querySelectorAll('.nav ul a[href^="#"]'));
+    var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))});
+    var tick=false;
+    var upd=function(){tick=false;var h=document.documentElement,max=h.scrollHeight-innerHeight;bar.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';
+      var y=scrollY+innerHeight*0.35,cur=-1;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
+      links.forEach(function(a,i){var on=i===cur;a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+      var act=links[cur];if(act&&act.scrollIntoView&&act.parentNode.parentNode.scrollWidth>act.parentNode.parentNode.clientWidth){var ul=act.parentNode.parentNode;ul.scrollLeft=act.offsetLeft-ul.clientWidth/2}};
+    window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+    window.addEventListener('resize',upd);upd();
+  })();
 })();
 </script>
 
